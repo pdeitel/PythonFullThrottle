@@ -5,6 +5,8 @@ Source code and Jupyter Notebooks files for my "Python Full Throttle" live train
 https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920289395
 * June 24, 2019:  
 https://learning.oreilly.com/live-training/courses/python-r-full-throttle-with-paul-deitel/0636920281498
+* July 22, 2019:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920305385/
   
 I'll keep this repository up-to-date with any changes I make for future presentations. 
 
