@@ -10,7 +10,7 @@ https://learning.oreilly.com/live-training/courses/python-full-throttle-with-pau
   
 I'll keep this repository up-to-date with any changes I make for future presentations. 
 
-These files are for your personal use and may not be redistributed or reposted.
+**These files are for your personal use and may not be redistributed or reposted.**
 
 If you have any questions, open an issue in the Issues tab or email us: deitel at deitel dot com.
 
