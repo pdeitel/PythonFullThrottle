@@ -24,7 +24,7 @@ class Card:
     @property
     def image_name(self):
         """Return the Card's image file name."""
-        return str(self).lower().replace(' ', '_') + '.png'
+        return str(self).replace(' ', '_').lower() + '.png'
 
     def __repr__(self):
         """Return string representation for repr()."""

@@ -13124,8 +13124,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="8.-Strings:-A-Deeper-Look">8. Strings: A Deeper Look<a class="anchor-link" href="#8.-Strings:-A-Deeper-Look">&#182;</a></h1><h1 id="Section-8.1">Section 8.1<a class="anchor-link" href="#Section-8.1">&#182;</a></h1><ul>
-<li>String methods <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">(full list)</a>.</li>
+<h1 id="8.-Strings:-A-Deeper-Look">8. Strings: A Deeper Look<a class="anchor-link" href="#8.-Strings:-A-Deeper-Look">&#182;</a></h1><h1 id="8.1-Introduction">8.1 Introduction<a class="anchor-link" href="#8.1-Introduction">&#182;</a></h1><ul>
+<li>Format string content.</li>
+<li>Manipulate strings with a few of the many string methods <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">(full list)</a>.</li>
+<li>Regular expressions for matching patterns in strings, replace substrings and validate data.</li>
 </ul>
 
 </div>
@@ -13134,7 +13136,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-8.2">Section 8.2<a class="anchor-link" href="#Section-8.2">&#182;</a></h1><h1 id="Section-8.2.1">Section 8.2.1<a class="anchor-link" href="#Section-8.2.1">&#182;</a></h1>
+<h1 id="8.2-Formatting-Strings">8.2 Formatting Strings<a class="anchor-link" href="#8.2-Formatting-Strings">&#182;</a></h1><h1 id="8.2.1-Presentation-Types">8.2.1 Presentation Types<a class="anchor-link" href="#8.2.1-Presentation-Types">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="f-Presentation-Type-for-Floating-Point-Numbers-and-'Decimal's"><strong><code>f</code> Presentation Type</strong> for Floating-Point Numbers and 'Decimal's<a class="anchor-link" href="#f-Presentation-Type-for-Floating-Point-Numbers-and-'Decimal's">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13174,7 +13183,20 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<ul>
+<li>Can also use the <strong><code>e</code> presentation type</strong> for exponential (scientific) notation.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="d-Presentation-Type-for-Integers"><strong><code>d</code> Presentation Type</strong> for Integers<a class="anchor-link" href="#d-Presentation-Type-for-Integers">&#182;</a></h3><ul>
+<li>There also are integer presentation types (<code>b</code>, <code>o</code> and <code>x</code> or <code>X</code>) that format integers using the binary, octal or hexadecimal number systems. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13214,7 +13236,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="c-presentation-type-Formats-an-Integer-Character-Code-as-a-Character"><strong><code>c</code> presentation type</strong> Formats an Integer Character Code as a Character<a class="anchor-link" href="#c-presentation-type-Formats-an-Integer-Character-Code-as-a-Character">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13254,7 +13276,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="s-Presentation-Type-for-Strings-Is-the-Default"><strong><code>s</code> Presentation Type</strong> for Strings Is the Default<a class="anchor-link" href="#s-Presentation-Type-for-Strings-Is-the-Default">&#182;</a></h3><ul>
+<li>If specified explicitly, the value to format <strong>must be a string</strong>, an <strong>expression that produces a string</strong> or a <strong>string literal</strong>. </li>
+<li>If you do not specify a presentation type, non-string values are converted to strings.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13294,14 +13320,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-8.2.2">Section 8.2.2<a class="anchor-link" href="#Section-8.2.2">&#182;</a></h2>
+<h2 id="8.2.2-Field-Widths-and-Alignment">8.2.2 Field Widths and Alignment<a class="anchor-link" href="#8.2.2-Field-Widths-and-Alignment">&#182;</a></h2><ul>
+<li>Python <strong>right-aligns numbers</strong> and <strong>left-aligns other values</strong>.</li>
+<li>Python formats <code>float</code> values with <strong>six digits of precision</strong>.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13407,7 +13430,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Explicitly-Specifying-Left-and-Right-Alignment-in-a-Field-with-&lt;-and-&gt;">Explicitly Specifying Left and Right Alignment in a Field with <code>&lt;</code> and <code>&gt;</code><a class="anchor-link" href="#Explicitly-Specifying-Left-and-Right-Alignment-in-a-Field-with-&lt;-and-&gt;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13513,7 +13536,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Centering-a-Value-in-a-Field-with-^">Centering a Value in a Field with <code>^</code><a class="anchor-link" href="#Centering-a-Value-in-a-Field-with-^">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13553,14 +13576,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h2 id="8.2.3-Numeric-Formatting">8.2.3 Numeric Formatting<a class="anchor-link" href="#8.2.3-Numeric-Formatting">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-8.2.3">Section 8.2.3<a class="anchor-link" href="#Section-8.2.3">&#182;</a></h2>
+<h3 id="Grouping-Digits-with-Thousands-Separators-via-a-Comma-(,)">Grouping Digits with <strong>Thousands Separators</strong> via a <strong>Comma (<code>,</code>)</strong><a class="anchor-link" href="#Grouping-Digits-with-Thousands-Separators-via-a-Comma-(,)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13633,14 +13656,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-8.6">Section 8.6<a class="anchor-link" href="#Section-8.6">&#182;</a></h1>
+<h1 id="8.6-Comparison-Operators-for-Strings-Use-Lexicographical-Comparisons">8.6 Comparison Operators for Strings Use Lexicographical Comparisons<a class="anchor-link" href="#8.6-Comparison-Operators-for-Strings-Use-Lexicographical-Comparisons">&#182;</a></h1><ul>
+<li>All the comparison operators are supported.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13777,14 +13796,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="8.7-Searching-for-Substrings">8.7 Searching for Substrings<a class="anchor-link" href="#8.7-Searching-for-Substrings">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-8.7">Section 8.7<a class="anchor-link" href="#Section-8.7">&#182;</a></h1>
+<h3 id="Counting-Occurrences">Counting Occurrences<a class="anchor-link" href="#Counting-Occurrences">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13837,7 +13856,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<ul>
+<li>Like <code>count</code>, each of the other string methods presented in this section has <strong>start</strong> and <strong>end</strong> arguments for searching only a <strong>slice of the original string</strong>. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13884,7 +13906,10 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Locating-the-First-Occurrence-of-a-Substring-in-a-String-with-Method-index">Locating the <strong>First</strong> Occurrence of a Substring in a String with Method <strong><code>index</code></strong><a class="anchor-link" href="#Locating-the-First-Occurrence-of-a-Substring-in-a-String-with-Method-index">&#182;</a></h3><ul>
+<li><code>ValueError</code> if the substring is not found.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13957,7 +13982,10 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Locating-the-Last-Occurrence-of-a-Substring-in-a-String-with-Method-rindex">Locating the <strong>Last</strong> Occurrence of a Substring in a String with Method <strong><code>rindex</code></strong><a class="anchor-link" href="#Locating-the-Last-Occurrence-of-a-Substring-in-a-String-with-Method-rindex">&#182;</a></h3><ul>
+<li>Various string methods provide "<code>r</code>" versions that work from the end of the string.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13997,14 +14025,8 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
+<h3 id="String-Methods-find-and-rfind">String Methods <strong><code>find</code></strong> and <strong><code>rfind</code></strong><a class="anchor-link" href="#String-Methods-find-and-rfind">&#182;</a></h3><ul>
+<li>Like <code>index</code> and <code>rindex</code> but, if the substring is not found, return <code>-1</code> rather than causing a <code>ValueError</code>. </li>
 <li>See the <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">full list of string methods</a> for additional searching capabilities.</li>
 </ul>
 
@@ -14014,7 +14036,7 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Determining-Whether-a-String-Contains-a-Substring-(Case-Sensitive)">Determining Whether a String Contains a Substring (Case Sensitive)<a class="anchor-link" href="#Determining-Whether-a-String-Contains-a-Substring-(Case-Sensitive)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14120,14 +14142,7 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-8.8">Section 8.8<a class="anchor-link" href="#Section-8.8">&#182;</a></h1>
+<h1 id="8.8-Replacing-Substrings-with-Method-replace">8.8 Replacing Substrings with Method <strong><code>replace</code></strong><a class="anchor-link" href="#8.8-Replacing-Substrings-with-Method-replace">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -14180,14 +14195,17 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="8.9-Splitting-and-Joining-Strings">8.9 Splitting and Joining Strings<a class="anchor-link" href="#8.9-Splitting-and-Joining-Strings">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-8.9">Section 8.9<a class="anchor-link" href="#Section-8.9">&#182;</a></h1>
+<h3 id="Splitting-Strings-with-Method-split">Splitting Strings with Method <code>split</code><a class="anchor-link" href="#Splitting-Strings-with-Method-split">&#182;</a></h3><ul>
+<li>Tokenizes a string at each whitespace character by default. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14240,7 +14258,10 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Joining-Strings-with-Method-join">Joining Strings with Method <strong><code>join</code></strong><a class="anchor-link" href="#Joining-Strings-with-Method-join">&#182;</a></h3><ul>
+<li>Concatenates an iterable <strong>containing only string values</strong>. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14326,14 +14347,10 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-8.11">Section 8.11<a class="anchor-link" href="#Section-8.11">&#182;</a></h1>
+<h1 id="8.11-Raw-Strings">8.11 Raw Strings<a class="anchor-link" href="#8.11-Raw-Strings">&#182;</a></h1><ul>
+<li>Backslash characters in strings introduce <strong>escape sequences</strong>. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14386,7 +14403,11 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<ul>
+<li><strong>Raw strings</strong>—preceded by <strong><code>r</code></strong>—treat each backslash as a literal character.</li>
+<li>Particularly useful with <strong>regular expressions</strong>, which often contain backslashes.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14439,14 +14460,17 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-8.12">Section 8.12<a class="anchor-link" href="#Section-8.12">&#182;</a></h1>
+<h1 id="8.12-Introduction-to-Regular-Expressions">8.12 Introduction to Regular Expressions<a class="anchor-link" href="#8.12-Introduction-to-Regular-Expressions">&#182;</a></h1><ul>
+<li><strong>Regular expressions (regex)</strong> recognize <strong>patterns</strong> in text&mdash;phone numbers, e-mail addresses, ZIP Codes, web page addresses, Social Security numbers, ...</li>
+<li>Useful for <ul>
+<li>Validating data.</li>
+<li>Extracting data from text (known as <strong>scraping</strong> or <strong>mining</strong>).</li>
+<li>Cleaning data to prepare it for use. </li>
+<li>Transforming data into other formats.</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14465,7 +14489,21 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-8.12.1">Section 8.12.1<a class="anchor-link" href="#Section-8.12.1">&#182;</a></h2>
+<h2 id="8.12.1-re-Module-and-Function-fullmatch">8.12.1 <strong><code>re</code> Module</strong> and Function <code>fullmatch</code><a class="anchor-link" href="#8.12.1-re-Module-and-Function-fullmatch">&#182;</a></h2><ul>
+<li>Function <strong><code>fullmatch</code></strong> checks whether the <strong>entire string</strong> in its second argument <strong>matches the pattern</strong> in its first argument. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Use-\d-Predefined-Character-Class-and-a-Quantifier-to-Match-5-Digits">Use <code>\d</code> Predefined Character Class and a Quantifier to Match <strong>5 Digits</strong><a class="anchor-link" href="#Use-\d-Predefined-Character-Class-and-a-Quantifier-to-Match-5-Digits">&#182;</a></h3><ul>
+<li><strong><code>\d</code></strong> matches one digit (0–9). </li>
+<li>A character class <strong>matches <em>one</em> character</strong>. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14551,7 +14589,70 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Predefined-Character-Classes">Predefined Character Classes<a class="anchor-link" href="#Predefined-Character-Classes">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th style="text-align:left">Character class</th>
+<th style="text-align:left">Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>\d</code></td>
+<td style="text-align:left">Any digit (0–9).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\D</code></td>
+<td style="text-align:left">Any character that is <em>not</em> a digit.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\s</code></td>
+<td style="text-align:left">Any whitespace character (such as spaces, tabs and newlines).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\S</code></td>
+<td style="text-align:left">Any character that is <em>not</em> a whitespace character.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\w</code></td>
+<td style="text-align:left">Any <strong>word character</strong> (also called an <strong>alphanumeric character</strong>)—that is, any uppercase or lowercase letter, any digit or an underscore</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>\W</code></td>
+<td style="text-align:left">Any character that is <em>not</em> a word character.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Custom-Character-Classes-Are-Defined-in-[]">Custom Character Classes Are Defined in <code>[]</code><a class="anchor-link" href="#Custom-Character-Classes-Are-Defined-in-[]">&#182;</a></h3><ul>
+<li><code>[aeiou]</code> matches a lowercase vowel</li>
+<li><code>[A-Z]</code> matches an uppercase letter</li>
+<li><code>[a-z]</code> matches a lowercase letter </li>
+<li><code>[a-zA-Z]</code> matches any lowercase or uppercase letter. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Validate-a-Simple-First-Name">Validate a Simple First Name<a class="anchor-link" href="#Validate-a-Simple-First-Name">&#182;</a></h3><ul>
+<li><strong><code>*</code> quantifier</strong> matches <strong>zero or more occurrences</strong> of the subexpression to its left (<strong><code>[a-z]</code></strong>)</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14624,14 +14725,30 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Other-Quantifiers">Other Quantifiers<a class="anchor-link" href="#Other-Quantifiers">&#182;</a></h3><ul>
+<li><strong><code>+</code> quantifier</strong> is like <code>*</code> but matches <strong>at least one occurrence</strong> of a subexpression.</li>
+<li><strong><code>?</code></strong> quantifier matches <strong>zero or one occurrences</strong> of a subexpression.</li>
+<li><strong><code>{n,}</code></strong> quantifier matches <strong>at least <em>n</em> occurrences</strong> of a subexpression. </li>
+<li><strong><code>{n,m}</code></strong> quantifier matches <strong>between <em>n</em> and <em>m</em> (inclusive) occurrences</strong> of a subexpression.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-8.12.2">Section 8.12.2<a class="anchor-link" href="#Section-8.12.2">&#182;</a></h2>
+<h2 id="8.12.2-Replacing-Substrings-and-Splitting-Strings">8.12.2 Replacing Substrings and Splitting Strings<a class="anchor-link" href="#8.12.2-Replacing-Substrings-and-Splitting-Strings">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Function-sub&#8212;Replacing-All-Occurrences-of-a-Pattern">Function <code>sub</code>&#8212;Replacing <strong>All</strong> Occurrences of a Pattern<a class="anchor-link" href="#Function-sub&#8212;Replacing-All-Occurrences-of-a-Pattern">&#182;</a></h3><ul>
+<li>Three arguments&mdash;<strong>pattern to match</strong>, <strong>replacement text</strong> and <strong>string to search</strong>.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14671,7 +14788,7 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Function-split&#8212;Tokenizing-a-String-Using-a-Regex-to-Specify-the-Delimiter">Function <code>split</code>&#8212;Tokenizing a String Using a Regex to Specify the Delimiter<a class="anchor-link" href="#Function-split&#8212;Tokenizing-a-String-Using-a-Regex-to-Specify-the-Delimiter">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14712,14 +14829,18 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h2 id="8.12.3-Other-Search-Functions;-Accessing-Matches">8.12.3 Other Search Functions; Accessing Matches<a class="anchor-link" href="#8.12.3-Other-Search-Functions;-Accessing-Matches">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-8.12.3">Section 8.12.3<a class="anchor-link" href="#Section-8.12.3">&#182;</a></h2>
+<h3 id="Function-search&#8212;Finding-the-First-Match-Anywhere-in-a-String">Function <code>search</code>&#8212;Finding the First Match Anywhere in a String<a class="anchor-link" href="#Function-search&#8212;Finding-the-First-Match-Anywhere-in-a-String">&#182;</a></h3><ul>
+<li>Returns a <strong>match object</strong> (of type <strong><code>SRE_Match</code></strong>) that contains the matching substring. </li>
+<li>The match object’s <strong><code>group</code></strong> method returns matching substring.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14772,7 +14893,11 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<ul>
+<li>Can search for a match only at the <strong>beginning of a string</strong> with function <strong><code>match</code></strong>. </li>
+<li><code>search</code> returns <code>None</code> if the string does <strong>not</strong> contain the pattern: </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14825,7 +14950,11 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Ignoring-Case-with-flags=re.IGNORECASE">Ignoring Case with <code>flags=re.IGNORECASE</code><a class="anchor-link" href="#Ignoring-Case-with-flags=re.IGNORECASE">&#182;</a></h3><ul>
+<li>Matches are <strong>case sensitive</strong> by default.</li>
+<li>Many <code>re</code> module functions receive an <strong>optional <code>flags</code> keyword argument</strong> that changes how regular expressions are matched. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14878,7 +15007,7 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Function-findall-Returns-a-List-of-Matching-Substrings">Function <code>findall</code> Returns a List of Matching Substrings<a class="anchor-link" href="#Function-findall-Returns-a-List-of-Matching-Substrings">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14931,7 +15060,10 @@ interpreted as in slice notation.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Function-finditer-Returns-a-Lazy-Iterable-of-Match-Objects">Function <code>finditer</code> Returns a <strong>Lazy Iterable</strong> of Match Objects<a class="anchor-link" href="#Function-finditer-Returns-a-Lazy-Iterable-of-Match-Objects">&#182;</a></h3><ul>
+<li>Can save memory over <code>findall</code> because it returns one match at a time.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14967,13 +15099,6 @@ interpreted as in slice notation.
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">

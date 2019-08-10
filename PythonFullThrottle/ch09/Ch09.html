@@ -13127,6 +13127,14 @@ div#notebook {
 <h1 id="9.-Files-and-Exceptions">9. Files and Exceptions<a class="anchor-link" href="#9.-Files-and-Exceptions">&#182;</a></h1><ul>
 <li>Note: Some sections reordered from our book for <em>Python Full Throttle</em> presentation purposes. </li>
 </ul>
+<h1 id="9.1-Introduction">9.1 Introduction<a class="anchor-link" href="#9.1-Introduction">&#182;</a></h1><ul>
+<li>Text files processing.</li>
+<li><strong>CSV files</strong>&mdash;common format for machine-learning datasets.</li>
+<li>Serialize objects into the <strong>JSON data-interchange format</strong>—commonly used to transmit over the Internet—and deserialize JSON into objects.</li>
+<li><strong><code>with</code> statement</strong> for avoiding “resource leaks.”</li>
+<li><strong><code>try</code>...<code>except</code>...<code>else</code>...<code>finally</code> statement</strong> for exception handling.</li>
+<li><strong><code>raise</code> exceptions</strong> to indicate runtime problems.</li>
+</ul>
 
 </div>
 </div>
@@ -13134,14 +13142,59 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-9.3">Section 9.3<a class="anchor-link" href="#Section-9.3">&#182;</a></h2>
+<h1 id="9.2-Files">9.2 Files<a class="anchor-link" href="#9.2-Files">&#182;</a></h1><ul>
+<li>Python views a <strong>text file</strong> as a sequence of characters and a <strong>binary file</strong> (for images, videos and more) as a sequence of bytes starting at position 0. </li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-9.3.1">Section 9.3.1<a class="anchor-link" href="#Section-9.3.1">&#182;</a></h2>
+<p><img src="ch09images/AAEMYSR0.png" alt="Conceptual view of a file" title="Conceptual view of a file"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Standard-File-Objects-Like-Other-C-Based-Languages">Standard File Objects Like Other C-Based Languages<a class="anchor-link" href="#Standard-File-Objects-Like-Other-C-Based-Languages">&#182;</a></h3><ul>
+<li>When a Python program begins execution, it creates three <strong>standard file objects</strong>:<ul>
+<li><strong><code>sys.stdin</code></strong>—the <strong>standard input file object</strong></li>
+<li><strong><code>sys.stdout</code></strong>—the <strong>standard output file object</strong>, and </li>
+<li><strong><code>sys.stderr</code></strong>—the <strong>standard error file object</strong>. </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="9.3-Text-File-Processing">9.3 Text-File Processing<a class="anchor-link" href="#9.3-Text-File-Processing">&#182;</a></h2><ul>
+<li>Python imposes no structure on a file.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="9.3.1-Writing-to-a-Text-File:-Introducing-the-with-Statement">9.3.1 Writing to a Text File: Introducing the <code>with</code> Statement<a class="anchor-link" href="#9.3.1-Writing-to-a-Text-File:-Introducing-the-with-Statement">&#182;</a></h2><ul>
+<li>For each file you <strong>open</strong>, Python creates a <strong>file object</strong> that you’ll use to interact with the file.</li>
+<li><code>with</code> statement <ul>
+<li>Acquires a resource and assigns its corresponding object to a variable.</li>
+<li>Allows the application to use the resource via that variable.</li>
+<li>Calls the resource object’s <strong><code>close</code> method</strong> to release the resource.</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13166,7 +13219,20 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<ul>
+<li>Can also <strong>write to a file with <code>print</code></strong>, which <strong>automatically outputs a <code>\n</code></strong>, as in<blockquote><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;100 Jones 24.98&#39;</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">accounts</span><span class="p">)</span>
+</pre></div>
+</blockquote>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Contents-of-accounts.txt-File">Contents of accounts<code>.txt</code> File<a class="anchor-link" href="#Contents-of-accounts.txt-File">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13208,14 +13274,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-9.3.2">Section 9.3.2<a class="anchor-link" href="#Section-9.3.2">&#182;</a></h2>
+<h2 id="9.3.2-Reading-Data-from-a-Text-File">9.3.2 Reading Data from a Text File<a class="anchor-link" href="#9.3.2-Reading-Data-from-a-Text-File">&#182;</a></h2><ul>
+<li>Iterating through a file object, <strong>reads one line at a time from the file</strong> and returns it as a string. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13262,14 +13324,40 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="9.5-Serialization-with-JSON-and-the-Python-Standard-Library-Module-json">9.5 Serialization with JSON and the Python Standard Library Module <code>json</code><a class="anchor-link" href="#9.5-Serialization-with-JSON-and-the-Python-Standard-Library-Module-json">&#182;</a></h1><ul>
+<li><strong>JSON (JavaScript Object Notation)</strong> is a text-based, human-and-computer-readable, data-interchange format used to represent objects as collections of name–value pairs. </li>
+<li>Preferred data format for transmitting objects across platforms. </li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-9.5">Section 9.5<a class="anchor-link" href="#Section-9.5">&#182;</a></h1>
+<h3 id="JSON-Data-Format-Is-Similar-to-Python-Dictionaries">JSON Data Format Is Similar to Python Dictionaries<a class="anchor-link" href="#JSON-Data-Format-Is-Similar-to-Python-Dictionaries">&#182;</a></h3><ul>
+<li><p>Each JSON object contains a comma-separated list of <strong>property names</strong> and <strong>values</strong>, in curly braces.</p>
+<blockquote><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;account&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jones&quot;</span><span class="p">,</span> <span class="s2">&quot;balance&quot;</span><span class="p">:</span> <span class="mf">24.98</span><span class="p">}</span>
+</pre></div>
+</blockquote>
+</li>
+<li><p>JSON arrays, like Python lists, are comma-separated values in square brackets.</p>
+<blockquote><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span>
+</pre></div>
+</blockquote>
+</li>
+<li><p>Values in JSON objects and arrays can be:</p>
+<ul>
+<li><strong>strings</strong> in <strong>double quotes</strong></li>
+<li><strong>numbers</strong></li>
+<li>JSON Boolean values <strong><code>true</code></strong> or <strong><code>false</code></strong> </li>
+<li><strong><code>null</code></strong> (like <code>None</code> in Python)</li>
+<li><strong>arrays</strong>  </li>
+<li><strong>other JSON objects</strong></li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13293,7 +13381,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Serializing-an-Object-to-JSON-with-the-json-Module&#8217;s-dump-Function">Serializing an Object to JSON with the <code>json</code> Module&#8217;s <strong><code>dump</code> Function</strong><a class="anchor-link" href="#Serializing-an-Object-to-JSON-with-the-json-Module&#8217;s-dump-Function">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13357,7 +13445,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Deserializing-JSON-Text-with-the-json-Module&#8217;s-load-Function">Deserializing JSON Text with the <code>json</code> Module&#8217;s <strong><code>load</code> Function</strong><a class="anchor-link" href="#Deserializing-JSON-Text-with-the-json-Module&#8217;s-load-Function">&#182;</a></h3><ul>
+<li>Reads entire file and converts the JSON into a Python object. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13378,7 +13469,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Interacting-with-the-Deserialized-Object">Interacting with the Deserialized Object<a class="anchor-link" href="#Interacting-with-the-Deserialized-Object">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13519,7 +13610,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Pretty-Printing-JSON-Text-with-the-json-Module&#8217;s-dumps-Function">Pretty Printing JSON Text with the <code>json</code> Module&#8217;s <strong><code>dumps</code> Function</strong><a class="anchor-link" href="#Pretty-Printing-JSON-Text-with-the-json-Module&#8217;s-dumps-Function">&#182;</a></h3><ul>
+<li>Short for “dump string”. </li>
+<li>Returns a Python string representation of an object in JSON format. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13571,13 +13666,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Serializing/Deserializing-Objects-of-Custom-Class-Types">Serializing/Deserializing Objects of Custom Class Types<a class="anchor-link" href="#Serializing/Deserializing-Objects-of-Custom-Class-Types">&#182;</a></h3><ul>
 <li>Check out the <a href="https://jsons.readthedocs.io/en/latest/?badge=latest">open source jsons library</a>.</li>
 </ul>
@@ -13588,14 +13676,32 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-9.12">Section 9.12<a class="anchor-link" href="#Section-9.12">&#182;</a></h1>
+<h1 id="9.12-Working-with-CSV-Files">9.12 Working with CSV Files<a class="anchor-link" href="#9.12-Working-with-CSV-Files">&#182;</a></h1><ul>
+<li>Datasets are often provided in <strong>CSV (comma-separated values)</strong> format. </li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-9.12.1">Section 9.12.1<a class="anchor-link" href="#Section-9.12.1">&#182;</a></h2>
+<h2 id="9.12.1-Python-Standard-Library-Module-csv">9.12.1 Python Standard Library Module <code>csv</code><a class="anchor-link" href="#9.12.1-Python-Standard-Library-Module-csv">&#182;</a></h2><ul>
+<li>Provides functions for working with CSV files. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Writing-to-a-CSV-File-with-the--writer-Function">Writing to a CSV File with the  <strong><code>writer</code> Function</strong><a class="anchor-link" href="#Writing-to-a-CSV-File-with-the--writer-Function">&#182;</a></h3><ul>
+<li><strong>Open CSV files with the additional keyword argument <code>newline=''</code></strong> to ensure that <strong>newlines are processed properly</strong> across platforms.</li>
+<li>Each call to a <code>writer</code>’s <strong><code>writerow</code> method</strong> receives an <strong>iterable</strong> to write as a line of comma-delimited text in the file.</li>
+<li><code>writerow</code> delimits values with commas, but you can specify custom delimiters. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13630,13 +13736,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13676,7 +13775,32 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<ul>
+<li>Multiple <code>writerow</code> calls can be replaced with one <strong><code>writerows</code></strong> call that outputs a <strong>comma-separated list of iterables</strong> (e.g., a list of lists) representing the records.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Fields-Containing-Commas">Fields Containing Commas<a class="anchor-link" href="#Fields-Containing-Commas">&#182;</a></h3><ul>
+<li>If you write data that contains commas within a given string, <code>writerow</code> encloses that string in double quotes.</li>
+<li>The field <code>'Jones, Sue'</code> would be written as <code>"Jones, Sue"</code> and read as a single field on input.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading-from-a-CSV-File-with-the-reader-Function">Reading from a CSV File with the <strong><code>reader</code></strong> Function<a class="anchor-link" href="#Reading-from-a-CSV-File-with-the-reader-Function">&#182;</a></h3><ul>
+<li>Returns an object that <strong>reads CSV-format data</strong> from the specified file object. </li>
+<li>Can iterate through a <code>reader</code> object to read one record at a time. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13724,7 +13848,47 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="9.7-Additional-Notes-Regarding-Files">9.7 Additional Notes Regarding Files<a class="anchor-link" href="#9.7-Additional-Notes-Regarding-Files">&#182;</a></h1><h3 id="File-Open-Modes">File-Open Modes<a class="anchor-link" href="#File-Open-Modes">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th style="text-align:left">Mode</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>'r'</code></td>
+<td style="text-align:left">Open a text file for reading. This is the default if you do not specify the file-open mode when you call open. </td>
+</tr>
+<tr>
+<td style="text-align:left"><code>'w'</code></td>
+<td style="text-align:left">Open a text file for writing. Existing file contents are <em>deleted</em>. </td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>'a'</code></strong></td>
+<td style="text-align:left">Open a text file for appending at the end, creating the file if it does not exist. New data is written at the end of the file. </td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>'r+'</code></strong></td>
+<td style="text-align:left">Open a text file reading and writing. </td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>'w+'</code></strong></td>
+<td style="text-align:left">Open a text file reading and writing. Existing file contents are <em>deleted</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>'a+'</code></strong></td>
+<td style="text-align:left">Open a text file reading and appending at the end. New data is written at the end of the file. If the file does not exist, it is created. </td>
+</tr>
+</tbody>
+</table>
+
 </div>
 </div>
 </div>
@@ -13741,14 +13905,20 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-9.8">Section 9.8<a class="anchor-link" href="#Section-9.8">&#182;</a></h1>
+<h1 id="9.8-Handling-Exceptions">9.8 Handling Exceptions<a class="anchor-link" href="#9.8-Handling-Exceptions">&#182;</a></h1><p>Exceptions when you work with files:</p>
+<ul>
+<li>A <strong><code>FileNotFoundError</code></strong> occurs if you <strong>attempt to open a non-existent file</strong> for reading with the <code>'r'</code> or <code>'r+'</code> modes. </li>
+<li>A <strong><code>PermissionsError</code></strong> occurs if you <strong>attempt an operation for which you do not have permission</strong>. </li>
+<li>A <code>ValueError</code> (with the error message <code>'I/O operation on closed file.'</code>) occurs when you <strong>attempt to write to a file that has already been closed</strong>.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-9.8.2">Section 9.8.2<a class="anchor-link" href="#Section-9.8.2">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># dividebyzero.py</span>
+<h2 id="9.8.2-try-Statements">9.8.2 <code>try</code> Statements<a class="anchor-link" href="#9.8.2-try-Statements">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># dividebyzero.py</span>
 <span class="sd">&quot;&quot;&quot;Simple exception handling example.&quot;&quot;&quot;</span>
 
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
@@ -13766,13 +13936,6 @@ div#notebook {
         <span class="k">break</span>  <span class="c1"># terminate the loop</span>
 </pre></div>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
 </div>
 </div>
 </div>
@@ -13858,14 +14021,32 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h2 id="9.8.3-Catching-Multiple-Exceptions-in-One-except-Clause">9.8.3 Catching Multiple Exceptions in One <code>except</code> Clause<a class="anchor-link" href="#9.8.3-Catching-Multiple-Exceptions-in-One-except-Clause">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">except</span> <span class="p">(</span><span class="n">type1</span><span class="p">,</span> <span class="n">type2</span><span class="p">,</span> <span class="err">…</span><span class="p">)</span> <span class="k">as</span> <span class="n">variable_name</span><span class="p">:</span>
+</pre></div>
+<ul>
+<li><strong><code>as</code> clause is optional</strong>&mdash;needed only if you want to access the exception object in the <code>except</code> suite.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-9.9">Section 9.9<a class="anchor-link" href="#Section-9.9">&#182;</a></h1>
+<h1 id="9.9-finally-Clause-of-the-try-Statement">9.9 <code>finally</code> Clause of the <code>try</code> Statement<a class="anchor-link" href="#9.9-finally-Clause-of-the-try-Statement">&#182;</a></h1><ul>
+<li>Placed after any <code>except</code> clauses or the <code>else</code> clause. </li>
+<li>Guaranteed to execute. </li>
+<li>In other languages, this makes the <code>finally</code> suite an ideal location to place resource-deallocation code. </li>
+<li>In Python, the <code>with</code> statement is preferred for this.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Demonstrating-that-the-finally-Clause-Always-Executes">Demonstrating that the <code>finally</code> Clause Always Executes<a class="anchor-link" href="#Demonstrating-that-the-finally-Clause-Always-Executes">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13908,13 +14089,6 @@ finally always executes
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13961,14 +14135,37 @@ finally always executes
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Combining-with-Statements-and-try&#8230;except-Statements">Combining <code>with</code> Statements and <code>try&#8230;except</code> Statements<a class="anchor-link" href="#Combining-with-Statements-and-try&#8230;except-Statements">&#182;</a></h3><ul>
+<li>Most resources that require <strong>explicit release</strong>, such as files, network connections and database connections, have potential exceptions associated with processing those resources. </li>
+<li>Can place a <code>with</code> statement in a <code>try</code> suite to guarantee that the resource gets released properly and have the opportunity to catch exceptions. </li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-9.11">Section 9.11<a class="anchor-link" href="#Section-9.11">&#182;</a></h1>
+<h1 id="9.10-Explicitly-Raising-an-Exception-with-the-raise-Statement">9.10 Explicitly Raising an Exception with the <strong><code>raise</code></strong> Statement<a class="anchor-link" href="#9.10-Explicitly-Raising-an-Exception-with-the-raise-Statement">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="n">ExceptionClassName</span>
+</pre></div>
+<ul>
+<li>Creates an object of the specified exception class. </li>
+<li>Optionally, specify parentheses containing arguments to initialize the exception object.</li>
+<li>Code that raises an exception should first release any resources acquired before the exception occurred. </li>
+<li>Generally, you should raise one of Python’s <a href="https://docs.python.org/3/library/exceptions.html"><strong>many built-in exception types</strong></a>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="9.11-Stack-Unwinding-and-Tracebacks">9.11 Stack Unwinding and Tracebacks<a class="anchor-link" href="#9.11-Stack-Unwinding-and-Tracebacks">&#182;</a></h1><ul>
+<li>Each exception object stores information indicating the precise series of function calls that led to the exception. </li>
+<li>In a traceback, the bottom of the stack is shown first, and the <strong>raise point</strong> is shown last.**</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14047,7 +14244,12 @@ finally always executes
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Tip-for-Reading-Tracebacks">Tip for Reading Tracebacks<a class="anchor-link" href="#Tip-for-Reading-Tracebacks">&#182;</a></h3><ul>
+<li>When reading a traceback, start from the end of the traceback and read the error message first. </li>
+<li>Then, read upward through the traceback, looking for the first line that indicates code you wrote in your program. </li>
+<li>Typically, this is the location in your code that led to the exception.</li>
+</ul>
+
 </div>
 </div>
 </div>

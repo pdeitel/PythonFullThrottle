@@ -13124,14 +13124,23 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="4.-Functions">4. Functions<a class="anchor-link" href="#4.-Functions">&#182;</a></h1>
+<h1 id="4.-Functions">4. Functions<a class="anchor-link" href="#4.-Functions">&#182;</a></h1><h1 id="4.1-Introduction">4.1 Introduction<a class="anchor-link" href="#4.1-Introduction">&#182;</a></h1><ul>
+<li>Custom function definitions.</li>
+<li>More details on importing modules.</li>
+<li>Pass data between functions.</li>
+<li>Random numbers for simulations.</li>
+<li>Introduction to tuples.</li>
+<li>Functions with default parameter values.</li>
+<li>Keyword arguments.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-4.2">Section 4.2<a class="anchor-link" href="#Section-4.2">&#182;</a></h1>
+<h1 id="4.2-Defining-a-square-Function">4.2 Defining a <code>square</code> Function<a class="anchor-link" href="#4.2-Defining-a-square-Function">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13219,7 +13228,19 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Three-Ways-to-Return-a-Result-to-a-Function&#8217;s-Caller">Three Ways to Return a Result to a Function&#8217;s Caller<a class="anchor-link" href="#Three-Ways-to-Return-a-Result-to-a-Function&#8217;s-Caller">&#182;</a></h3><ul>
+<li><strong><code>return</code></strong> followed by an expression.</li>
+<li><strong><code>return</code></strong> without an expression implicitly returns <strong><code>None</code></strong>&mdash;represents the <strong>absence of a value</strong> and <strong>evaluates to <code>False</code> in conditions</strong>.</li>
+<li><strong>No <code>return</code> statement implicitly returns <code>None</code></strong>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Accessing-a-Function&#8217;s-Docstring-via-IPython&#8217;s-Help-Mechanism">Accessing a Function&#8217;s Docstring via IPython&#8217;s Help Mechanism<a class="anchor-link" href="#Accessing-a-Function&#8217;s-Docstring-via-IPython&#8217;s-Help-Mechanism">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13249,7 +13270,7 @@ div#notebook {
 <div class="output_text output_subarea ">
 <pre><span class="ansi-red-fg">Signature:</span> square<span class="ansi-blue-fg">(</span>number<span class="ansi-blue-fg">)</span>
 <span class="ansi-red-fg">Docstring:</span> Calculate the square of number.
-<span class="ansi-red-fg">File:</span>      ~/Dropbox/GitHub/PythonFullThrottleAttendeeVersion/PythonFullThrottle/ch04/&lt;ipython-input-1-e89415d8d522&gt;
+<span class="ansi-red-fg">File:</span>      ~/Dropbox/GitHub/PythonFullThrottle/PythonFullThrottle/ch04/&lt;ipython-input-1-e89415d8d522&gt;
 <span class="ansi-red-fg">Type:</span>      function
 </pre>
 </div>
@@ -13263,14 +13284,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-4.3">Section 4.3<a class="anchor-link" href="#Section-4.3">&#182;</a></h1>
+<h1 id="4.3-Functions-with-Multiple-Parameters">4.3 Functions with Multiple Parameters<a class="anchor-link" href="#4.3-Functions-with-Multiple-Parameters">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13366,7 +13380,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Built-In-max-and-min-Support-Arbitrary-Length-Argument-Lists">Built-In <code>max</code> and <code>min</code> Support Arbitrary Length Argument Lists<a class="anchor-link" href="#Built-In-max-and-min-Support-Arbitrary-Length-Argument-Lists">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13439,7 +13453,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Built-In-max-and-min-Functions-Also-Can-Receive-Iterable-Arguments">Built-In <code>max</code> and <code>min</code> Functions Also Can Receive Iterable Arguments<a class="anchor-link" href="#Built-In-max-and-min-Functions-Also-Can-Receive-Iterable-Arguments">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13512,7 +13526,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-4.4">Section 4.4<a class="anchor-link" href="#Section-4.4">&#182;</a></h1>
+<h1 id="4.4-Random-Number-Generation-Via-the-Python-Standard-Library&#8217;s-random-Module">4.4 Random-Number Generation Via the Python Standard Library&#8217;s <strong><code>random</code> Module</strong><a class="anchor-link" href="#4.4-Random-Number-Generation-Via-the-Python-Standard-Library&#8217;s-random-Module">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Rolling-a-Six-Sided-Die">Rolling a Six-Sided Die<a class="anchor-link" href="#Rolling-a-Six-Sided-Die">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13552,7 +13573,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>3  4  5  1  1  5  5  1  6  1  </pre>
+<pre>3  2  4  2  4  3  2  1  4  3  </pre>
 </div>
 </div>
 
@@ -13583,7 +13604,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>4  2  3  2  2  3  3  3  1  5  </pre>
+<pre>1  1  3  3  2  3  1  6  6  6  </pre>
 </div>
 </div>
 
@@ -13594,7 +13615,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Seeding-the-Random-Number-Generator-for-Reproducibility">Seeding the Random-Number Generator for Reproducibility<a class="anchor-link" href="#Seeding-the-Random-Number-Generator-for-Reproducibility">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13721,14 +13742,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-4.5">Section 4.5<a class="anchor-link" href="#Section-4.5">&#182;</a></h1>
+<h1>4.5 Case Study: A Game of Chance&mdash;Introducing <strong>tuples</strong> and the <strong><code>in</code> Operator</strong></h1>
+<ul>
+<li>This is just a portion of the dice-game script from Figure 4.2 in our book.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13830,14 +13848,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-4.7">Section 4.7<a class="anchor-link" href="#Section-4.7">&#182;</a></h1>
+<h1 id="4.7-math-Module-Functions">4.7 <code>math</code> Module Functions<a class="anchor-link" href="#4.7-math-Module-Functions">&#182;</a></h1><ul>
+<li>The <a href="https://docs.python.org/3/library/math.html"><strong>math module</strong></a> contains similar functions to those in C's <code>math.h</code>, C++'s <code>&lt;math&gt;</code>, Java's <code>Math</code> class, .NET's <code>Math</code> class, etc.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13923,15 +13937,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-4.8">Section 4.8<a class="anchor-link" href="#Section-4.8">&#182;</a></h1><ul>
-<li>Click in each cell, position cursor to right of text and press <strong>Tab</strong> to see the autocompletion options</li>
+<h1 id="4.8-Using-IPython-Tab-Completion-for-Discovery">4.8 Using IPython Tab Completion for Discovery<a class="anchor-link" href="#4.8-Using-IPython-Tab-Completion-for-Discovery">&#182;</a></h1><ul>
+<li>After <strong>ma</strong> in the following cell, press <strong>Tab</strong> for possible completions</li>
 </ul>
 
 </div>
@@ -13953,7 +13960,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3>View Identifiers in a Module&mdash;Type the Module’s Name and a Dot (<code>.</code>), then <em>Tab</em></h3>
+
 </div>
 </div>
 </div>
@@ -13973,14 +13981,18 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Python-Does-Not-Have-Constants">Python Does Not Have Constants<a class="anchor-link" href="#Python-Does-Not-Have-Constants">&#182;</a></h3><ul>
+<li>Even though the <strong><code>math</code> module's variables <code>pi</code> and <code>e</code></strong> are real-world constants, <strong>you must not assign new values to them</strong>, because that would change their values.</li>
+<li><strong>Style guide recommends naming your custom constants with all capital letters</strong>.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-4.9">Section 4.9<a class="anchor-link" href="#Section-4.9">&#182;</a></h1>
+<h1 id="4.9-Functions-with-Default-Parameter-Values">4.9 Functions with Default Parameter Values<a class="anchor-link" href="#4.9-Functions-with-Default-Parameter-Values">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -14035,14 +14047,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-4.10">Section 4.10<a class="anchor-link" href="#Section-4.10">&#182;</a></h1>
+<h1 id="4.10-Keyword-Arguments-Can-Be-Passed-in-Any-Order-After-Required-Positional-Arguments">4.10 Keyword Arguments Can Be Passed in Any Order <strong>After Required Positional Arguments</strong><a class="anchor-link" href="#4.10-Keyword-Arguments-Can-Be-Passed-in-Any-Order-After-Required-Positional-Arguments">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -14082,17 +14087,19 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="4.13-Scope-Rules">4.13 Scope Rules<a class="anchor-link" href="#4.13-Scope-Rules">&#182;</a></h1><ul>
+<li>A local variable’s identifier has <strong>local scope</strong>. </li>
+<li>Identifiers defined outside any function (or class) have <strong>global scope</strong>—these may include functions, variables and classes.</li>
+<li><a href="https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces">Complete scope details</a>.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-4.13">Section 4.13<a class="anchor-link" href="#Section-4.13">&#182;</a></h1><ul>
-<li><a href="https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces">Complete scope details</a>.</li>
-</ul>
-
+<h3 id="Accessing-a-Global-Variable-from-a-Function">Accessing a Global Variable from a Function<a class="anchor-link" href="#Accessing-a-Global-Variable-from-a-Function">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14157,7 +14164,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="By-Default,-You-Cannot-Modify-a-Global-Variable-in-a-Function">By Default, You Cannot <em>Modify</em> a Global Variable in a Function<a class="anchor-link" href="#By-Default,-You-Cannot-Modify-a-Global-Variable-in-a-Function">&#182;</a></h3><ul>
+<li>Python creates a <strong>new local variable</strong> when you assign a value to a variable in a function’s block.</li>
+<li>In function <code>try_to_modify_global</code>’s block, <strong>the local <code>x</code> shadows the global <code>x</code></strong>, making it inaccessible in the scope of the function’s block. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14243,7 +14254,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Must-Use-global-Statement-to-Modify-a-Global-Variable-in-a-Function&#8217;s-Block">Must Use <code>global</code> Statement to Modify a Global Variable in a Function&#8217;s Block<a class="anchor-link" href="#Must-Use-global-Statement-to-Modify-a-Global-Variable-in-a-Function&#8217;s-Block">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14330,7 +14341,26 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Blocks-vs.-Suites">Blocks vs. Suites<a class="anchor-link" href="#Blocks-vs.-Suites">&#182;</a></h3><ul>
+<li>When you create a variable in a block, it’s <em>local</em> to that block.</li>
+<li>When you create a variable in a control statement’s suite, the variable’s scope depends on where the control statement is defined:<ul>
+<li>If it's in the global scope, any variables defined in the control statement have <strong>global scope</strong>.</li>
+<li>If it's in a function’s block, any variables defined in the control statement have <strong>local scope</strong>.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Shadowing-Functions">Shadowing Functions<a class="anchor-link" href="#Shadowing-Functions">&#182;</a></h3><ul>
+<li>In the preceding chapters, when summing values, we stored the sum in a variable named <code>total</code>. </li>
+<li>If you define a variable named <code>sum</code>, it <em>shadows</em> the built-in function <code>sum</code>, making it inaccessible in your code. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14465,14 +14495,22 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="4.15-Passing-Arguments-to-Functions:-A-Deeper-Look">4.15 Passing Arguments to Functions: A Deeper Look<a class="anchor-link" href="#4.15-Passing-Arguments-to-Functions:-A-Deeper-Look">&#182;</a></h1><ul>
+<li><strong>Python arguments are always passed by reference</strong>. </li>
+<li>Some people call this <strong>pass-by-object-reference</strong>, because “everything in Python is an object.” </li>
+<li>When a function call provides an argument, Python copies the argument object’s <em>reference</em>—not the object itself—into the corresponding parameter. </li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-4.15">Section 4.15<a class="anchor-link" href="#Section-4.15">&#182;</a></h1>
+<h3 id="Memory-Addresses,-References-and-&#8220;Pointers&#8221;">Memory Addresses, References and &#8220;Pointers&#8221;<a class="anchor-link" href="#Memory-Addresses,-References-and-&#8220;Pointers&#8221;">&#182;</a></h3><ul>
+<li>After an assignment like the following, the variable <code>x</code> contains a reference to an <em>object</em> containing <code>7</code> stored <em>elsewhere</em> in memory.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14492,7 +14530,26 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<p><img src="ch04images/AAEMYQU0a.png" alt="Variable referring to an object" title="Variable referring to an object"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Built-In-Function-id-and-Object-Identities">Built-In Function <code>id</code> and Object Identities<a class="anchor-link" href="#Built-In-Function-id-and-Object-Identities">&#182;</a></h3><ul>
+<li>Every object has a <strong>unique</strong> <strong>identity</strong>&mdash;an <code>int</code> value which <strong>identifies only that object</strong> while it remains in memory.</li>
+<li><strong>Built-in <code>id</code> function</strong> to obtain an object's identity.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Using-Object-Identities-to-Show-That-Objects-Are-Passed-By-Reference">Using Object Identities to Show That Objects Are Passed By Reference<a class="anchor-link" href="#Using-Object-Identities-to-Show-That-Objects-Are-Passed-By-Reference">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14520,7 +14577,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>4439606688</pre>
+<pre>4360402336</pre>
 </div>
 
 </div>
@@ -14566,7 +14623,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>4439606752</pre>
+<pre>4360402400</pre>
 </div>
 
 </div>
@@ -14578,7 +14635,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Passing-an-Object-to-a-Function">Passing an Object to a Function<a class="anchor-link" href="#Passing-an-Object-to-a-Function">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14619,7 +14676,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>id(number): 4439606688
+<pre>id(number): 4360402336
 </pre>
 </div>
 </div>
@@ -14644,7 +14701,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Comparing-Object-Identities-with-the-is-Operator">Comparing Object Identities with the <code>is</code> Operator<a class="anchor-link" href="#Comparing-Object-Identities-with-the-is-Operator">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14710,7 +14767,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Immutable-Objects-as-Arguments">Immutable Objects as Arguments<a class="anchor-link" href="#Immutable-Objects-as-Arguments">&#182;</a></h3><ul>
+<li>When a function receives as an argument a reference to an <em>immutable</em> (unmodifiable) object—such as an <code>int</code>, <code>float</code>, <code>string</code> or <code>tuple</code>—even though you have direct access to the original object in the caller, you cannot modify the original immutable object’s value. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14753,8 +14813,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>id(number) before modifying number: 4439606688
-id(number) after modifying number: 4477629136
+<pre>id(number) before modifying number: 4360402336
+id(number) after modifying number: 4397708112
 </pre>
 </div>
 </div>
@@ -14798,7 +14858,7 @@ id(number) after modifying number: 4477629136
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>x = 7; id(x) = 4439606688
+<pre>x = 7; id(x) = 4360402336
 </pre>
 </div>
 </div>
@@ -14810,7 +14870,72 @@ id(number) after modifying number: 4477629136
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="4.17-Functional-Style-Programming">4.17 Functional-Style Programming<a class="anchor-link" href="#4.17-Functional-Style-Programming">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Some Key Python Functional-Style Programming Capabilities and Our Book Chapter(s) in which They Appear</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th style="text-align:left">Functional-style programming topics</th>
+<th style="text-align:left">&nbsp;</th>
+<th style="text-align:left">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">avoiding side effects (4)</td>
+<td style="text-align:left">closures</td>
+<td style="text-align:left">declarative programming (4)</td>
+</tr>
+<tr>
+<td style="text-align:left">decorators (10)</td>
+<td style="text-align:left">dictionary comprehensions (6)</td>
+<td style="text-align:left"><code>filter</code>/<code>map</code>/<code>reduce</code> (5)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>functools</code> module</td>
+<td style="text-align:left">generator expressions (5)</td>
+<td style="text-align:left">generator functions</td>
+</tr>
+<tr>
+<td style="text-align:left">higher-order functions (5)</td>
+<td style="text-align:left">immutability (4)</td>
+<td style="text-align:left">internal iteration (4)</td>
+</tr>
+<tr>
+<td style="text-align:left">iterators (3)</td>
+<td style="text-align:left"><code>itertools</code> module (16)</td>
+<td style="text-align:left"><code>lambda</code> expressions (5)</td>
+</tr>
+<tr>
+<td style="text-align:left">lazy evaluation (5)</td>
+<td style="text-align:left">list comprehensions (5)</td>
+<td style="text-align:left">operator module (5, 11, 16)</td>
+</tr>
+<tr>
+<td style="text-align:left">pure functions (4)</td>
+<td style="text-align:left">range function (3, 4)</td>
+<td style="text-align:left">reductions (3, 5)</td>
+</tr>
+<tr>
+<td style="text-align:left">set comprehensions (6)</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 </div>
 </div>

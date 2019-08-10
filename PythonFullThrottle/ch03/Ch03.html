@@ -13124,14 +13124,88 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.-Control-Statements">3. Control Statements<a class="anchor-link" href="#3.-Control-Statements">&#182;</a></h1>
+<h1 id="3.-Control-Statements">3. Control Statements<a class="anchor-link" href="#3.-Control-Statements">&#182;</a></h1><h1 id="3.1-Introduction">3.1 Introduction<a class="anchor-link" href="#3.1-Introduction">&#182;</a></h1><ul>
+<li><code>if</code>, <code>if</code>…<code>else</code> and <code>if</code>…<code>elif</code>…<code>else</code>.</li>
+<li><code>while</code> and <code>for</code> loops.</li>
+<li>Built-in function <code>range</code> for integer ranges.</li>
+<li>Augmented assignments.</li>
+<li><code>Decimal</code> type for precise monetary calculations.</li>
+<li>Boolean operators <code>and</code>, <code>or</code> and <code>not</code>.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-3.3">Section 3.3<a class="anchor-link" href="#Section-3.3">&#182;</a></h1>
+<h3 id="Keywords">Keywords<a class="anchor-link" href="#Keywords">&#182;</a></h3><table>
+<thead><tr>
+<th style="text-align:left">&nbsp;</th>
+<th style="text-align:left">&nbsp;</th>
+<th style="text-align:left">&nbsp;</th>
+<th style="text-align:left">&nbsp;</th>
+<th style="text-align:left">&nbsp;</th>
+<th style="text-align:left">&nbsp;</th>
+<th style="text-align:left">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>and</code></td>
+<td style="text-align:left"><code>as</code></td>
+<td style="text-align:left"><code>assert</code></td>
+<td style="text-align:left"><code>async</code></td>
+<td style="text-align:left"><code>await</code></td>
+<td style="text-align:left"><code>break</code></td>
+<td style="text-align:left"><code>class</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>continue</code></td>
+<td style="text-align:left"><code>def</code></td>
+<td style="text-align:left"><code>del</code></td>
+<td style="text-align:left"><code>elif</code></td>
+<td style="text-align:left"><code>else</code></td>
+<td style="text-align:left"><code>except</code></td>
+<td style="text-align:left"><strong><code>False</code></strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>finally</code></td>
+<td style="text-align:left"><code>for</code></td>
+<td style="text-align:left"><code>from</code></td>
+<td style="text-align:left"><code>global</code></td>
+<td style="text-align:left"><code>if</code></td>
+<td style="text-align:left"><code>import</code></td>
+<td style="text-align:left"><code>in</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>is</code></td>
+<td style="text-align:left"><code>lambda</code></td>
+<td style="text-align:left"><strong><code>None</code></strong></td>
+<td style="text-align:left"><code>nonlocal</code></td>
+<td style="text-align:left"><code>not</code></td>
+<td style="text-align:left"><code>or</code></td>
+<td style="text-align:left"><code>pass</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>raise</code></td>
+<td style="text-align:left"><code>return</code></td>
+<td style="text-align:left"><strong><code>True</code></strong></td>
+<td style="text-align:left"><code>try</code></td>
+<td style="text-align:left"><code>while</code></td>
+<td style="text-align:left"><code>with</code></td>
+<td style="text-align:left"><code>yield</code></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.3-if-Statement">3.3 <code>if</code> Statement<a class="anchor-link" href="#3.3-if-Statement">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13183,7 +13257,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Suite-Indentation-Is-Required">Suite Indentation Is Required<a class="anchor-link" href="#Suite-Indentation-Is-Required">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13226,13 +13300,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="In-a-Suite,-Indentation-Must-Be-Consistent">In a Suite, Indentation Must Be Consistent<a class="anchor-link" href="#In-a-Suite,-Indentation-Must-Be-Consistent">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
@@ -13270,13 +13344,18 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Every-Expression-Can-Be-Interpreted-as-True-or-False">Every Expression Can Be Interpreted as <code>True</code> or <code>False</code><a class="anchor-link" href="#Every-Expression-Can-Be-Interpreted-as-True-or-False">&#182;</a></h3><ul>
+<li>Nonzero is <code>True</code> </li>
+<li>Zero is <code>False</code>.</li>
+<li>Empty strings (and other collections) are <code>False</code>.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="mi">1</span><span class="p">:</span>
@@ -13308,7 +13387,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="mi">0</span><span class="p">:</span>
@@ -13323,20 +13402,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-3.4">Section 3.4<a class="anchor-link" href="#Section-3.4">&#182;</a></h1>
+<h1 id="3.4-if&#8230;else-and-if&#8230;elif&#8230;else-Statements">3.4 <code>if</code>&#8230;<code>else</code> and <code>if</code>&#8230;<code>elif</code>&#8230;<code>else</code> Statements<a class="anchor-link" href="#3.4-if&#8230;else-and-if&#8230;elif&#8230;else-Statements">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">85</span>
@@ -13349,7 +13421,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span> 
@@ -13383,7 +13455,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">57</span>
@@ -13396,7 +13468,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span> 
@@ -13431,13 +13503,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Shorthand-if&#8230;else-Via-Conditional-Expressions">Shorthand <code>if</code>&#8230;<code>else</code> Via Conditional Expressions<a class="anchor-link" href="#Shorthand-if&#8230;else-Via-Conditional-Expressions">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade</span>
@@ -13453,7 +13525,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[49]:</div>
+    <div class="prompt output_prompt">Out[79]:</div>
 
 
 
@@ -13470,7 +13542,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Passed&#39;</span> <span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span> <span class="k">else</span> <span class="s1">&#39;Failed&#39;</span>  <span class="c1"># ?: operator in most C-based languages</span>
@@ -13486,7 +13558,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[50]:</div>
+    <div class="prompt output_prompt">Out[80]:</div>
 
 
 
@@ -13504,13 +13576,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Multiple-Statements-in-a-Suite">Multiple Statements in a Suite<a class="anchor-link" href="#Multiple-Statements-in-a-Suite">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">49</span>
@@ -13523,7 +13595,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
@@ -13560,13 +13632,13 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="if&#8230;elif&#8230;else-Statement"><code>if</code>&#8230;<code>elif</code>&#8230;<code>else</code> Statement<a class="anchor-link" href="#if&#8230;elif&#8230;else-Statement">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">77</span>
@@ -13579,7 +13651,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
@@ -13620,20 +13692,13 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-3.5">Section 3.5<a class="anchor-link" href="#Section-3.5">&#182;</a></h1>
+<h1 id="3.5-while-Statement-that-Finds-the-First-Power-of-3-Larger-Than-50">3.5 <code>while</code> Statement that Finds the First Power of 3 Larger Than 50<a class="anchor-link" href="#3.5-while-Statement-that-Finds-the-First-Power-of-3-Larger-Than-50">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">product</span> <span class="o">=</span> <span class="mi">3</span>
@@ -13646,7 +13711,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">while</span> <span class="n">product</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>
@@ -13660,7 +13725,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">product</span>
@@ -13676,7 +13741,7 @@ You must take this course again
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[57]:</div>
+    <div class="prompt output_prompt">Out[87]:</div>
 
 
 
@@ -13694,20 +13759,16 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-3.6">Section 3.6<a class="anchor-link" href="#Section-3.6">&#182;</a></h1>
+<h1 id="3.6-for-Statement-Repeats-Its-Suite-for-Each-Item-in-a-Sequence-of-Items">3.6 <code>for</code> Statement Repeats Its Suite for Each Item in a <strong>Sequence of Items</strong><a class="anchor-link" href="#3.6-for-Statement-Repeats-Its-Suite-for-Each-Item-in-a-Sequence-of-Items">&#182;</a></h1><ul>
+<li>A string is a sequence of individual characters.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="s1">&#39;Programming&#39;</span><span class="p">:</span>  <span class="c1"># character is the &quot;target&quot; variable</span>
@@ -13739,13 +13800,16 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="print&#8217;s-sep-(separator)-Keyword-Argument-Specifies-the-String-to-Display-Between-print&#8217;s-Arugments"><code>print</code>&#8217;s <code>sep</code> (separator) Keyword Argument Specifies the String to Display Between <code>print</code>&#8217;s Arugments<a class="anchor-link" href="#print&#8217;s-sep-(separator)-Keyword-Argument-Specifies-the-String-to-Display-Between-print&#8217;s-Arugments">&#182;</a></h3><ul>
+<li>To remove the default spaces, use <code>sep=''</code> (that is, an empty string).</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
@@ -13777,20 +13841,17 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-3.6.1">Section 3.6.1<a class="anchor-link" href="#Section-3.6.1">&#182;</a></h2>
+<h2 id="3.6.1-Iterables,-Lists-and-Iterators">3.6.1 Iterables, Lists and Iterators<a class="anchor-link" href="#3.6.1-Iterables,-Lists-and-Iterators">&#182;</a></h2><ul>
+<li>The sequence to the right of the <code>for</code> statement’s <code>in</code> keyword must be an <strong>iterable</strong>. </li>
+<li>One of the most common iterable sequence types is a <strong><code>list</code></strong>. </li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
@@ -13803,7 +13864,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>  <span class="c1"># iterate through the list [1, 2, 3, 4, 5]</span>
@@ -13817,7 +13878,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span>
@@ -13833,7 +13894,7 @@ You must take this course again
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[62]:</div>
+    <div class="prompt output_prompt">Out[92]:</div>
 
 
 
@@ -13851,20 +13912,13 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-3.6.2">Section 3.6.2<a class="anchor-link" href="#Section-3.6.2">&#182;</a></h2>
+<h2 id="3.6.2-Built-In-range-Function-Creates-a-Sequence-of-Consecutive-Integers">3.6.2 Built-In <code>range</code> Function Creates a Sequence of Consecutive Integers<a class="anchor-link" href="#3.6.2-Built-In-range-Function-Creates-a-Sequence-of-Consecutive-Integers">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">counter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>  <span class="c1"># 0-9</span>
@@ -13896,14 +13950,88 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="3.7-Augmented-Assignments-Abbreviate-Assignment-Expressions">3.7 Augmented Assignments Abbreviate Assignment Expressions<a class="anchor-link" href="#3.7-Augmented-Assignments-Abbreviate-Assignment-Expressions">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-3.8">Section 3.8<a class="anchor-link" href="#Section-3.8">&#182;</a></h1><div class="highlight"><pre><span></span><span class="c1"># class_average.py</span>
+<p>In the table, assume:</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">g</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">12</span>
+</pre></div>
+</blockquote>
+<table>
+<thead><tr>
+<th style="text-align:left">Augmented assignment</th>
+<th style="text-align:left">Sample expression</th>
+<th style="text-align:left">Explanation</th>
+<th style="text-align:left">Assigns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>+=</code></td>
+<td style="text-align:left"><code>c</code> <code>+=</code> <code>7</code></td>
+<td style="text-align:left"><code>c</code> <code>=</code> <code>c</code> <code>+</code> <code>7</code></td>
+<td style="text-align:left"><code>10</code> to <code>c</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-=</code></td>
+<td style="text-align:left"><code>d</code> <code>-=</code> <code>4</code></td>
+<td style="text-align:left"><code>d</code> <code>=</code> <code>d</code> <code>-</code> <code>4</code></td>
+<td style="text-align:left"><code>1</code> to <code>d</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>*=</code></td>
+<td style="text-align:left"><code>e</code> <code>*=</code> <code>5</code></td>
+<td style="text-align:left"><code>e</code> <code>=</code> <code>e</code> <code>*</code> <code>5</code></td>
+<td style="text-align:left"><code>20</code> to <code>e</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>**=</code></td>
+<td style="text-align:left"><code>f</code> <code>**=</code> <code>3</code></td>
+<td style="text-align:left"><code>f</code> <code>=</code> <code>f</code> <code>**</code> <code>3</code></td>
+<td style="text-align:left"><code>8</code> to <code>f</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/=</code></td>
+<td style="text-align:left"><code>g</code> <code>/=</code> <code>2</code></td>
+<td style="text-align:left"><code>g</code> <code>=</code> <code>g</code> <code>/</code> <code>2</code></td>
+<td style="text-align:left"><code>4.5</code> to <code>g</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>//=</code></td>
+<td style="text-align:left"><code>g</code> <code>//=</code> <code>2</code></td>
+<td style="text-align:left"><code>g</code> <code>=</code> <code>g</code> <code>//</code> <code>2</code></td>
+<td style="text-align:left"><code>4</code> to <code>g</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%=</code></td>
+<td style="text-align:left"><code>h</code> <code>%=</code> <code>9</code></td>
+<td style="text-align:left"><code>h</code> <code>=</code> <code>h</code> <code>%</code> <code>9</code></td>
+<td style="text-align:left"><code>3</code> to <code>h</code></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.8-Sequence-Controlled-Iteration;-Formatted-Strings">3.8 Sequence-Controlled Iteration; Formatted Strings<a class="anchor-link" href="#3.8-Sequence-Controlled-Iteration;-Formatted-Strings">&#182;</a></h1><ul>
+<li><p>Can run the script at the command line with the <strong><code>ipython</code> command</strong>.</p>
+<blockquote><p><code>ipython class_average.py</code></p>
+</blockquote>
+</li>
+<li><p>Can run the script in Jupyter command with the <strong><code>run</code> command</strong>.</p>
+<blockquote><p><code>run class_average.py</code></p>
+</blockquote>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># class_average.py</span>
 <span class="sd">&quot;&quot;&quot;Class average program with sequence-controlled iteration.&quot;&quot;&quot;</span>
 
 <span class="c1"># initialization phase</span>
@@ -13936,7 +14064,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">run</span> <span class="n">class_average</span><span class="o">.</span><span class="n">py</span>
@@ -13968,20 +14096,35 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<ul>
+<li>Run script in Jupyter.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-3.10">Section 3.10<a class="anchor-link" href="#Section-3.10">&#182;</a></h1>
+<h3 id="Introduction-to-Formatted-Strings">Introduction to Formatted Strings<a class="anchor-link" href="#Introduction-to-Formatted-Strings">&#182;</a></h3><ul>
+<li><strong>f-strings</strong> (short for <strong>formatted strings</strong>) were introduced in Python 3.6.</li>
+<li>The letter <strong><code>f</code></strong> before a string’s opening quote indicates it’s an f-string. </li>
+<li>You specify where to insert <strong>replacement text</strong> by using <em>placeholders</em> delimited by curly braces (<code>{</code> and <code>}</code>). </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.10-Built-In-Function-range:-A-Deeper-Look">3.10 Built-In Function <code>range</code>: A Deeper Look<a class="anchor-link" href="#3.10-Built-In-Function-range:-A-Deeper-Look">&#182;</a></h1><h3 id="Function-range&#8217;s-Two-Argument-Version">Function <code>range</code>&#8217;s Two-Argument Version<a class="anchor-link" href="#Function-range&#8217;s-Two-Argument-Version">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>  <span class="c1"># 5-9</span>
@@ -14013,13 +14156,13 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Function-range&#8217;s-Three-Argument-Version-Specifies-a-Step-to-Increment-By">Function <code>range</code>&#8217;s Three-Argument Version Specifies a Step to Increment By<a class="anchor-link" href="#Function-range&#8217;s-Three-Argument-Version-Specifies-a-Step-to-Increment-By">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>  <span class="c1"># 2 is the step; 0, 2, 4, 6, 8</span>
@@ -14051,13 +14194,13 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Function-range&#8217;s-Three-Argument-Version-with-a-Negative-Step-Counts-Down">Function <code>range</code>&#8217;s Three-Argument Version with a Negative Step Counts Down<a class="anchor-link" href="#Function-range&#8217;s-Three-Argument-Version-with-a-Negative-Step-Counts-Down">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">):</span>  <span class="c1"># 10, 8, 6, 4, 2</span>
@@ -14089,20 +14232,26 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="3.11-Using-Type-Decimal-for-Precise-Monetary-Amounts">3.11 Using Type <code>Decimal</code> for Precise Monetary Amounts<a class="anchor-link" href="#3.11-Using-Type-Decimal-for-Precise-Monetary-Amounts">&#182;</a></h1><ul>
+<li>Many floating-point values cannot be represented precisely in binary.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-3.11">Section 3.11<a class="anchor-link" href="#Section-3.11">&#182;</a></h1>
+<h3 id="Decimal-Arithmetic-Supports-the-Arithmetic-Operators-and-Augmented-Assignments"><code>Decimal</code> Arithmetic Supports the Arithmetic Operators and Augmented Assignments<a class="anchor-link" href="#Decimal-Arithmetic-Supports-the-Arithmetic-Operators-and-Augmented-Assignments">&#182;</a></h3><ul>
+<li>You may perform arithmetic <strong>between <code>Decimal</code>s and <code>Decimal</code>s</strong> or <strong><code>Decimal</code>s and integers</strong>, but <em>not</em> <code>Decimal</code>s and floating-point numbers.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">decimal</span> <span class="k">import</span> <span class="n">Decimal</span>
@@ -14115,7 +14264,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;10.5&#39;</span><span class="p">)</span>  <span class="c1"># typically create from strings for accuracy</span>
@@ -14128,7 +14277,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
@@ -14141,7 +14290,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
@@ -14157,7 +14306,7 @@ You must take this course again
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[71]:</div>
+    <div class="prompt output_prompt">Out[101]:</div>
 
 
 
@@ -14174,7 +14323,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">//</span> <span class="n">y</span>
@@ -14190,7 +14339,7 @@ You must take this course again
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[72]:</div>
+    <div class="prompt output_prompt">Out[102]:</div>
 
 
 
@@ -14207,7 +14356,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">+=</span> <span class="n">y</span>
@@ -14220,7 +14369,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
@@ -14236,7 +14385,7 @@ You must take this course again
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[74]:</div>
+    <div class="prompt output_prompt">Out[104]:</div>
 
 
 
@@ -14254,13 +14403,20 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Calculating-Compound-Interest-with-Decimal-Values">Calculating Compound Interest with <code>Decimal</code> Values<a class="anchor-link" href="#Calculating-Compound-Interest-with-Decimal-Values">&#182;</a></h3><ul>
+<li>Invest $1000 in a savings account yielding 5% interest. </li>
+<li>Leave all interest on deposit.</li>
+<li>Calculate and display the amount of money at the end of each year for 10 years. </li>
+</ul>
+<blockquote><p><em>amount</em> = <em>principal</em>(1 + <em>rate</em>)<sup><em>year</em></sup></p>
+</blockquote>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">principal</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;1000.00&#39;</span><span class="p">)</span>
@@ -14273,7 +14429,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">principal</span>
@@ -14289,7 +14445,7 @@ You must take this course again
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[76]:</div>
+    <div class="prompt output_prompt">Out[106]:</div>
 
 
 
@@ -14306,7 +14462,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rate</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.05&#39;</span><span class="p">)</span>
@@ -14319,7 +14475,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rate</span>
@@ -14335,7 +14491,7 @@ You must take this course again
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[78]:</div>
+    <div class="prompt output_prompt">Out[108]:</div>
 
 
 
@@ -14352,7 +14508,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
@@ -14395,20 +14551,65 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Formatting-the-Year-and-Amount-on-Deposit">Formatting the Year and Amount on Deposit<a class="anchor-link" href="#Formatting-the-Year-and-Amount-on-Deposit">&#182;</a></h3><ul>
+<li><code>{year:&gt;2}</code>&mdash;<strong>right align (<code>&gt;</code>)</strong> in a field of width <code>2</code>. </li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-3.13">Section 3.13<a class="anchor-link" href="#Section-3.13">&#182;</a></h1>
+<p><img src="./ch03images/formatting.png" alt="The numbers 1 and 10 each formatted in a field width of 2" title="The numbers 1 and 10 each formatted in a field width of 2"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>Left align</strong> with &lt;. </li>
+<li><code>{amount:&gt;10.2f}</code>&mdash;floating-point number (<code>f</code>) right aligned (<code>&gt;</code>) in a field of width <code>10</code> with two digits to the right of the decimal point (<code>.2</code>). </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./ch03images/formatting2.png" alt="1050.0 formatted with The format specifier 10.2f" title="1050.0 formatted with The format specifier 10.2f"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.12-break-and-continue-Statements">3.12 <code>break</code> and <code>continue</code> Statements<a class="anchor-link" href="#3.12-break-and-continue-Statements">&#182;</a></h1><ul>
+<li>Executing a <strong><code>break</code></strong> statement in a <code>while</code> or <code>for</code> immediately exits that statement.</li>
+<li>Executing a <strong><code>continue</code></strong> statement in a <code>while</code> or <code>for</code> loop skips the remainder of the loop’s suite. <ul>
+<li>In a <code>while</code>, the condition is then tested to determine whether the loop should continue executing. </li>
+<li>In a <code>for</code>, the loop processes the next item in the sequence (if any).</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.13-Boolean-Operators-and,-or-and-not">3.13 Boolean Operators and, or and not<a class="anchor-link" href="#3.13-Boolean-Operators-and,-or-and-not">&#182;</a></h1><h3 id="Boolean-Operator-and">Boolean Operator <code>and</code><a class="anchor-link" href="#Boolean-Operator-and">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gender</span> <span class="o">=</span> <span class="s1">&#39;Female&#39;</span>
@@ -14421,7 +14622,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">70</span>
@@ -14434,7 +14635,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">gender</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
@@ -14467,13 +14668,13 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Boolean-Operator-or">Boolean Operator <code>or</code><a class="anchor-link" href="#Boolean-Operator-or">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">semester_average</span> <span class="o">=</span> <span class="mi">83</span>
@@ -14486,7 +14687,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final_exam</span> <span class="o">=</span> <span class="mi">95</span>
@@ -14499,7 +14700,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">semester_average</span> <span class="o">&gt;=</span> <span class="mi">90</span> <span class="ow">or</span> <span class="n">final_exam</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
@@ -14532,13 +14733,13 @@ You must take this course again
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Boolean-Operator-not">Boolean Operator <code>not</code><a class="anchor-link" href="#Boolean-Operator-not">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">87</span>
@@ -14551,7 +14752,7 @@ You must take this course again
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">grade</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
@@ -14580,13 +14781,6 @@ You must take this course again
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">

@@ -13124,21 +13124,71 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="6.-Dictionaries-and-Sets">6. Dictionaries and Sets<a class="anchor-link" href="#6.-Dictionaries-and-Sets">&#182;</a></h1>
+<h1 id="6.-Dictionaries-and-Sets">6. Dictionaries and Sets<a class="anchor-link" href="#6.-Dictionaries-and-Sets">&#182;</a></h1><h1 id="6.1-Introduction">6.1 Introduction<a class="anchor-link" href="#6.1-Introduction">&#182;</a></h1><ul>
+<li>Dictionaries for unordered collections of key–value pairs.</li>
+<li>Sets for unordered collections of unique values.</li>
+<li>Common dictionary and set manipulations. </li>
+<li>Dictionary and set comparison operators.</li>
+<li>Operators <code>in</code> and <code>not</code> <code>in</code> with dictionaries and sets.</li>
+<li>Dictionary and set comprehensions.</li>
+<li>A dynamic Matplotlib/Seaborn visualization.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-6.2-Dictionaries">Section 6.2 Dictionaries<a class="anchor-link" href="#Section-6.2-Dictionaries">&#182;</a></h1>
+<h1 id="6.2-Dictionaries">6.2 Dictionaries<a class="anchor-link" href="#6.2-Dictionaries">&#182;</a></h1><ul>
+<li>A dictionary <strong>maps</strong> keys to values. </li>
+<li>Keys must be <strong>immutable</strong> and <strong>unique</strong>.</li>
+<li>Dictionaries also do not support slicing.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.2.1">Section 6.2.1<a class="anchor-link" href="#Section-6.2.1">&#182;</a></h2>
+<h3 id="Examples-of-Dictionaries">Examples of Dictionaries<a class="anchor-link" href="#Examples-of-Dictionaries">&#182;</a></h3><table>
+<thead><tr>
+<th style="text-align:left">Keys</th>
+<th style="text-align:left">Key type</th>
+<th style="text-align:left">Values</th>
+<th style="text-align:left">Value type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Country names</td>
+<td style="text-align:left"><code>str</code></td>
+<td style="text-align:left">Internet country codes</td>
+<td style="text-align:left"><code>str</code> </td>
+</tr>
+<tr>
+<td style="text-align:left">Decimal numbers</td>
+<td style="text-align:left"><code>int</code></td>
+<td style="text-align:left">Roman numerals</td>
+<td style="text-align:left"><code>str</code> </td>
+</tr>
+<tr>
+<td style="text-align:left">Baseball players</td>
+<td style="text-align:left"><code>str</code></td>
+<td style="text-align:left">Batting averages</td>
+<td style="text-align:left"><code>float</code> </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.2.1-Creating-a-Dictionary">6.2.1 Creating a Dictionary<a class="anchor-link" href="#6.2.1-Creating-a-Dictionary">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13191,7 +13241,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Built-In-Function-len-Returns-the-Number-of-Key&#8211;Value-Pairs">Built-In Function <code>len</code> Returns the Number of Key&#8211;Value Pairs<a class="anchor-link" href="#Built-In-Function-len-Returns-the-Number-of-Key&#8211;Value-Pairs">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13231,7 +13281,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Can-Use-a-Dictionary-as-a-Condition-to-Determine-Whether-It&#8217;s-Empty">Can Use a Dictionary as a Condition to Determine Whether It&#8217;s Empty<a class="anchor-link" href="#Can-Use-a-Dictionary-as-a-Condition-to-Determine-Whether-It&#8217;s-Empty">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13272,14 +13322,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h2 id="6.2.2-Iterating-through-a-Dictionary">6.2.2 Iterating through a Dictionary<a class="anchor-link" href="#6.2.2-Iterating-through-a-Dictionary">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.2.2">Section 6.2.2<a class="anchor-link" href="#Section-6.2.2">&#182;</a></h2>
+<h3 id="Method-items-Returns-Key&#8211;Value-Pairs-as-Tuples">Method <strong><code>items</code></strong> Returns Key&#8211;Value Pairs as Tuples<a class="anchor-link" href="#Method-items-Returns-Key&#8211;Value-Pairs-as-Tuples">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13366,14 +13416,10 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.2.3">Section 6.2.3<a class="anchor-link" href="#Section-6.2.3">&#182;</a></h2>
+<h2 id="6.2.3-Basic-Dictionary-Operations">6.2.3 Basic Dictionary Operations<a class="anchor-link" href="#6.2.3-Basic-Dictionary-Operations">&#182;</a></h2><ul>
+<li><code>'X'</code> value is <strong>intentionally incorrect</strong>.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13426,7 +13472,7 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Accessing-the-Value-Associated-with-a-Key">Accessing the Value Associated with a Key<a class="anchor-link" href="#Accessing-the-Value-Associated-with-a-Key">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13466,7 +13512,7 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Updating-the-Value-of-an-Existing-Key&#8211;Value-Pair">Updating the Value of an Existing Key&#8211;Value Pair<a class="anchor-link" href="#Updating-the-Value-of-an-Existing-Key&#8211;Value-Pair">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13519,7 +13565,7 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Adding-a-New-Key&#8211;Value-Pair-By-Assigning-to-a-Nonexistent-Key">Adding a New Key&#8211;Value Pair By Assigning to a Nonexistent Key<a class="anchor-link" href="#Adding-a-New-Key&#8211;Value-Pair-By-Assigning-to-a-Nonexistent-Key">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13572,7 +13618,7 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Removing-a-Key&#8211;Value-Pair">Removing a Key&#8211;Value Pair<a class="anchor-link" href="#Removing-a-Key&#8211;Value-Pair">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13625,7 +13671,7 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Removing-a-Key&#8211;Value-Pair-and-Getting-the-Corresponding-Value">Removing a Key&#8211;Value Pair and Getting the Corresponding Value<a class="anchor-link" href="#Removing-a-Key&#8211;Value-Pair-and-Getting-the-Corresponding-Value">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13698,7 +13744,7 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Attempting-to-Access-a-Nonexistent-Key-via-[]-is-a-KeyError">Attempting to Access a Nonexistent Key via <code>[]</code> is a <code>KeyError</code><a class="anchor-link" href="#Attempting-to-Access-a-Nonexistent-Key-via-[]-is-a-KeyError">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13741,13 +13787,13 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Dictionary-Method-get-Returns-None-if-the-Key-Is-Not-Found">Dictionary Method <strong><code>get</code></strong> Returns <code>None</code> if the Key Is Not Found<a class="anchor-link" href="#Dictionary-Method-get-Returns-None-if-the-Key-Is-Not-Found">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">roman_numerals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;III&#39;</span><span class="p">)</span>  <span class="c1"># no output because None is returned</span>
@@ -13760,50 +13806,10 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">roman_numerals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>5</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">roman_numerals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;III&#39;</span><span class="p">,</span> <span class="s1">&#39;III not in dictionary&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">roman_numerals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13822,7 +13828,7 @@ March has 31 days
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;III not in dictionary&#39;</pre>
+<pre>5</pre>
 </div>
 
 </div>
@@ -13834,7 +13840,7 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="get-with-a-Second-Argument-Returns-That-Value-When-the-Key-Is-Not-Found"><code>get</code> with a Second Argument Returns That Value When the Key Is Not Found<a class="anchor-link" href="#get-with-a-Second-Argument-Returns-That-Value-When-the-Key-Is-Not-Found">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13843,7 +13849,7 @@ March has 31 days
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">roman_numerals</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">roman_numerals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;III&#39;</span><span class="p">,</span> <span class="s1">&#39;III not in dictionary&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13862,7 +13868,7 @@ March has 31 days
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;I&#39;: 1, &#39;II&#39;: 2, &#39;V&#39;: 5, &#39;L&#39;: 50}</pre>
+<pre>&#39;III not in dictionary&#39;</pre>
 </div>
 
 </div>
@@ -13870,13 +13876,20 @@ March has 31 days
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Operators-in-and-not-in-Test-Whether-a-Dictionary-Contains-a-Key">Operators <code>in</code> and <code>not</code> <code>in</code> Test Whether a Dictionary Contains a Key<a class="anchor-link" href="#Operators-in-and-not-in-Test-Whether-a-Dictionary-Contains-a-Key">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;V&#39;</span> <span class="ow">in</span> <span class="n">roman_numerals</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">roman_numerals</span>
 </pre></div>
 
     </div>
@@ -13895,7 +13908,7 @@ March has 31 days
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>{&#39;I&#39;: 1, &#39;II&#39;: 2, &#39;V&#39;: 5, &#39;L&#39;: 50}</pre>
 </div>
 
 </div>
@@ -13909,7 +13922,7 @@ March has 31 days
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;III&#39;</span> <span class="ow">in</span> <span class="n">roman_numerals</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;V&#39;</span> <span class="ow">in</span> <span class="n">roman_numerals</span> 
 </pre></div>
 
     </div>
@@ -13928,6 +13941,39 @@ March has 31 days
 
 
 <div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;III&#39;</span> <span class="ow">in</span> <span class="n">roman_numerals</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
 
@@ -13940,20 +13986,13 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.2.4">Section 6.2.4<a class="anchor-link" href="#Section-6.2.4">&#182;</a></h2>
+<h2 id="6.2.4-Dictionary-Methods-keys-and-values">6.2.4 Dictionary Methods <code>keys</code> and <code>values</code><a class="anchor-link" href="#6.2.4-Dictionary-Methods-keys-and-values">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">months</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;January&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;February&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
@@ -13966,7 +14005,7 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">month_name</span> <span class="ow">in</span> <span class="n">months</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
@@ -13997,7 +14036,7 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">month_number</span> <span class="ow">in</span> <span class="n">months</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
@@ -14029,13 +14068,16 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Dictionary-Methods-items,-keys-and-values-Each-Return-a-View-of-a-Dictionary&#8217;s-Data">Dictionary Methods <code>items</code>, <code>keys</code> and <code>values</code> Each Return a View of a Dictionary&#8217;s Data<a class="anchor-link" href="#Dictionary-Methods-items,-keys-and-values-Each-Return-a-View-of-a-Dictionary&#8217;s-Data">&#182;</a></h3><ul>
+<li>When you iterate over a <strong><code>view</code></strong>, it “sees” the dictionary’s <strong>current contents</strong>—it does <strong>not</strong> have its own copy of the data.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">months_view</span> <span class="o">=</span> <span class="n">months</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
@@ -14048,7 +14090,7 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">months_view</span><span class="p">:</span>
@@ -14079,7 +14121,7 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">months</span><span class="p">[</span><span class="s1">&#39;December&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># add new key-value pair</span>
@@ -14092,7 +14134,7 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">months</span>
@@ -14108,7 +14150,7 @@ March has 31 days
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -14125,7 +14167,7 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">months_view</span><span class="p">:</span>  <span class="c1"># iterate over view again</span>
@@ -14157,13 +14199,13 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Processing-Keys-in-Sorted-Order-with-Built-In-Function-sorted">Processing Keys in Sorted Order with Built-In Function <code>sorted</code><a class="anchor-link" href="#Processing-Keys-in-Sorted-Order-with-Built-In-Function-sorted">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">month_name</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">months</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
@@ -14195,20 +14237,16 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.2.5">Section 6.2.5<a class="anchor-link" href="#Section-6.2.5">&#182;</a></h2>
+<h2 id="6.2.5-Dictionary-Comparisons-with-==-and-!=">6.2.5 Dictionary Comparisons with <code>==</code> and <code>!=</code><a class="anchor-link" href="#6.2.5-Dictionary-Comparisons-with-==-and-!=">&#182;</a></h2><ul>
+<li><code>==</code> is <code>True</code> if both dictionaries have the same key–value pairs, <strong><em>regardless</em> of insertion order</strong></li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_capitals1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Belgium&#39;</span><span class="p">:</span> <span class="s1">&#39;Brussels&#39;</span><span class="p">,</span>
@@ -14222,7 +14260,7 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_capitals2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Nepal&#39;</span><span class="p">:</span> <span class="s1">&#39;Kathmandu&#39;</span><span class="p">,</span>
@@ -14236,7 +14274,7 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_capitals3</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Haiti&#39;</span><span class="p">:</span> <span class="s1">&#39;Port-au-Prince&#39;</span><span class="p">,</span>
@@ -14250,76 +14288,10 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_capitals1</span> <span class="o">==</span> <span class="n">country_capitals2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[38]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_capitals1</span> <span class="o">==</span> <span class="n">country_capitals3</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[39]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_capitals1</span> <span class="o">!=</span> <span class="n">country_capitals2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_capitals1</span> <span class="o">==</span> <span class="n">country_capitals2</span>
 </pre></div>
 
     </div>
@@ -14338,6 +14310,72 @@ March has 31 days
 
 
 <div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_capitals1</span> <span class="o">==</span> <span class="n">country_capitals3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[41]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_capitals1</span> <span class="o">!=</span> <span class="n">country_capitals2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[42]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
 
@@ -14350,14 +14388,8 @@ March has 31 days
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.2.6">Section 6.2.6<a class="anchor-link" href="#Section-6.2.6">&#182;</a></h2>
+<h2 id="6.2.6-Example:-Dictionary-of-Student-Grades">6.2.6 Example: Dictionary of Student Grades<a class="anchor-link" href="#6.2.6-Example:-Dictionary-of-Student-Grades">&#182;</a></h2><p>Script for an instructor’s grade book mapping each student’s name (a string) to a list of integers containing grades on three exams.</p>
+
 </div>
 </div>
 </div>
@@ -14390,7 +14422,7 @@ March has 31 days
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">run</span> <span class="n">fig06_01</span><span class="o">.</span><span class="n">py</span>
@@ -14426,14 +14458,11 @@ Class&#39;s average is: 89.67
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.2.7">Section 6.2.7<a class="anchor-link" href="#Section-6.2.7">&#182;</a></h2>
+<h2 id="6.2.7-Example:-Word-Counts">6.2.7 Example: Word Counts<a class="anchor-link" href="#6.2.7-Example:-Word-Counts">&#182;</a></h2><ul>
+<li>The following script builds a dictionary to count the number of occurrences of each word in a <strong>tokenized</strong> string. </li>
+<li>Python automatically concatenates strings separated by whitespace in parentheses. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14468,7 +14497,7 @@ Class&#39;s average is: 89.67
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">run</span> <span class="n">fig06_02</span><span class="o">.</span><span class="n">py</span>
@@ -14512,13 +14541,17 @@ Number of unique words: 10
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Python-Standard-Library-Module-collections-and-Class-Counter">Python Standard Library Module <code>collections</code> and Class <strong><code>Counter</code></strong><a class="anchor-link" href="#Python-Standard-Library-Module-collections-and-Class-Counter">&#182;</a></h3><ul>
+<li>The Python Standard Library already contains the counting functionality shown above. </li>
+<li>A <strong><code>Counter</code></strong> receives an iterable and summarizes its elements. </li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
@@ -14531,7 +14564,7 @@ Number of unique words: 10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;this is sample text with several words &#39;</span>
@@ -14545,7 +14578,7 @@ Number of unique words: 10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
@@ -14558,7 +14591,7 @@ Number of unique words: 10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">counter</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
@@ -14599,7 +14632,7 @@ words       2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of unique keys:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">counter</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
@@ -14631,20 +14664,16 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.2.8">Section 6.2.8<a class="anchor-link" href="#Section-6.2.8">&#182;</a></h2>
+<h2 id="6.2.8-Dictionary-Method-update-Can-Insert-and-Update-Key&#8211;Value-Pairs">6.2.8 Dictionary Method <code>update</code> Can Insert and Update Key&#8211;Value Pairs<a class="anchor-link" href="#6.2.8-Dictionary-Method-update-Can-Insert-and-Update-Key&#8211;Value-Pairs">&#182;</a></h2><ul>
+<li>Method <code>update</code> also can receive an iterable object containing key–value pairs, such as a list of two-element tuples.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_codes</span> <span class="o">=</span> <span class="p">{}</span>
@@ -14657,64 +14686,11 @@ words       2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># could receive dict of many key-value pairs</span>
 <span class="n">country_codes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;South Africa&#39;</span><span class="p">:</span> <span class="s1">&#39;za&#39;</span><span class="p">})</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_codes</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[50]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;South Africa&#39;: &#39;za&#39;}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_codes</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">Australia</span><span class="o">=</span><span class="s1">&#39;ar&#39;</span><span class="p">)</span>  <span class="c1"># purposely incorrect country code &#39;ar&#39;</span>
 </pre></div>
 
     </div>
@@ -14746,7 +14722,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;South Africa&#39;: &#39;za&#39;, &#39;Australia&#39;: &#39;ar&#39;}</pre>
+<pre>{&#39;South Africa&#39;: &#39;za&#39;}</pre>
 </div>
 
 </div>
@@ -14758,7 +14734,10 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<ul>
+<li>Method <code>update</code> converts keyword arguments into key–value pairs.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14767,7 +14746,7 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_codes</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">Australia</span><span class="o">=</span><span class="s1">&#39;au&#39;</span><span class="p">)</span>  <span class="c1"># fixes incorrect value</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_codes</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">Australia</span><span class="o">=</span><span class="s1">&#39;ar&#39;</span><span class="p">)</span>  <span class="c1"># purposely incorrect country code &#39;ar&#39;</span>
 </pre></div>
 
     </div>
@@ -14799,7 +14778,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;South Africa&#39;: &#39;za&#39;, &#39;Australia&#39;: &#39;au&#39;}</pre>
+<pre>{&#39;South Africa&#39;: &#39;za&#39;, &#39;Australia&#39;: &#39;ar&#39;}</pre>
 </div>
 
 </div>
@@ -14811,14 +14790,10 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.2.9">Section 6.2.9<a class="anchor-link" href="#Section-6.2.9">&#182;</a></h2>
+<ul>
+<li>Let's update the country code for <code>Australia</code>. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14827,7 +14802,7 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">months</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;January&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;February&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_codes</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">Australia</span><span class="o">=</span><span class="s1">&#39;au&#39;</span><span class="p">)</span>  <span class="c1"># fixes incorrect value</span>
 </pre></div>
 
     </div>
@@ -14840,6 +14815,64 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_codes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;South Africa&#39;: &#39;za&#39;, &#39;Australia&#39;: &#39;au&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.2.9-Dictionary-Comprehensions">6.2.9 Dictionary Comprehensions<a class="anchor-link" href="#6.2.9-Dictionary-Comprehensions">&#182;</a></h2><ul>
+<li>Quickly generate dictionaries, often by <strong>mapping</strong> one dictionary to another. </li>
+<li>Expression to the left of the <code>for</code> clause specifies a <strong>key–value pair of the form <em>key</em><code>:</code> <em>value</em></strong>. </li>
+<li>In a dictionary with <strong><em>unique</em> values</strong>, you can <strong>reverse</strong> the key–value pair mappings. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">months</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;January&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;February&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">months2</span> <span class="o">=</span> <span class="p">{</span><span class="n">number</span><span class="p">:</span> <span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">months</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
 </pre></div>
 
@@ -14850,7 +14883,7 @@ words       2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">months2</span>
@@ -14866,7 +14899,7 @@ words       2
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[57]:</div>
+    <div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -14884,13 +14917,16 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Map-a-Dictionary&#8217;s-Values-to-New-Values-with-a-Comprehension">Map a Dictionary&#8217;s Values to New Values with a Comprehension<a class="anchor-link" href="#Map-a-Dictionary&#8217;s-Values-to-New-Values-with-a-Comprehension">&#182;</a></h3><ul>
+<li>From a dictionary of names and lists of grades, create a dictionary of names and grade-point averages.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Sue&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">98</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">94</span><span class="p">],</span> 
@@ -14904,7 +14940,7 @@ words       2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades2</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">grades</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
@@ -14917,70 +14953,10 @@ words       2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[60]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;Sue&#39;: 93.0, &#39;Bob&#39;: 90.0}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-6.3-Sets">Section 6.3 Sets<a class="anchor-link" href="#Section-6.3-Sets">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades2</span>
 </pre></div>
 
     </div>
@@ -14999,7 +14975,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;blue&#39;, &#39;green&#39;, &#39;orange&#39;, &#39;red&#39;, &#39;yellow&#39;}</pre>
+<pre>{&#39;Sue&#39;: 93.0, &#39;Bob&#39;: 90.0}</pre>
 </div>
 
 </div>
@@ -15011,7 +14987,22 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="6.3-Sets">6.3 Sets<a class="anchor-link" href="#6.3-Sets">&#182;</a></h1><ul>
+<li>Unordered collections of <strong>unique values</strong>. </li>
+<li>May contain <strong>only immutable objects</strong>, like strings, <code>int</code>s, <code>float</code>s and tuples that contain only immutable elements. </li>
+<li>Sets do not support indexing and slicing. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-a-Set-with-Curly-Braces">Creating a Set with Curly Braces<a class="anchor-link" href="#Creating-a-Set-with-Curly-Braces">&#182;</a></h3><ul>
+<li>Duplicates are ignored&mdash;great for <strong>duplicate elimination</strong>.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -15020,30 +15011,10 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">}</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[63]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>5</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -15051,7 +15022,10 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<ul>
+<li>Though the output below is sorted, sets are <strong>unordered</strong>&mdash;do not write order-dependent code. </li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -15060,7 +15034,7 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;red&#39;</span> <span class="ow">in</span> <span class="n">colors</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span>
 </pre></div>
 
     </div>
@@ -15079,7 +15053,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>{&#39;blue&#39;, &#39;green&#39;, &#39;orange&#39;, &#39;red&#39;, &#39;yellow&#39;}</pre>
 </div>
 
 </div>
@@ -15087,13 +15061,20 @@ words       2
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Determining-a-Set&#8217;s-Length">Determining a Set&#8217;s Length<a class="anchor-link" href="#Determining-a-Set&#8217;s-Length">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;purple&#39;</span> <span class="ow">in</span> <span class="n">colors</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15112,7 +15093,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>5</pre>
 </div>
 
 </div>
@@ -15124,7 +15105,7 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Operators-in-and-not-in:-Checking-Whether-a-Value-Is-in-a-Set">Operators <code>in</code> and <code>not</code> <code>in</code>: Checking Whether a Value Is in a Set<a class="anchor-link" href="#Operators-in-and-not-in:-Checking-Whether-a-Value-Is-in-a-Set">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15133,7 +15114,7 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;red&#39;</span> <span class="ow">in</span> <span class="n">colors</span>
 </pre></div>
 
     </div>
@@ -15152,7 +15133,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;blue&#39;, &#39;green&#39;, &#39;orange&#39;, &#39;red&#39;, &#39;yellow&#39;}</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -15164,6 +15145,79 @@ words       2
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;purple&#39;</span> <span class="ow">in</span> <span class="n">colors</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[67]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Iterating-Through-a-Set">Iterating Through a Set<a class="anchor-link" href="#Iterating-Through-a-Set">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[69]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;blue&#39;, &#39;green&#39;, &#39;orange&#39;, &#39;red&#39;, &#39;yellow&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>  <span class="c1"># no significance to iteration order</span>
@@ -15184,7 +15238,7 @@ words       2
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>RED YELLOW BLUE GREEN ORANGE </pre>
+<pre>ORANGE YELLOW BLUE RED GREEN </pre>
 </div>
 </div>
 
@@ -15195,13 +15249,13 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Creating-a-Set-from-Another-Collection-with-the-Built-In-set-Function">Creating a Set from Another Collection with the Built-In <code>set</code> Function<a class="anchor-link" href="#Creating-a-Set-from-Another-Collection-with-the-Built-In-set-Function">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
@@ -15214,96 +15268,10 @@ words       2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[69]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 2, 3, 4, 0, 1, 2]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[70]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{0, 1, 2, 3, 4}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span>
 </pre></div>
 
     </div>
@@ -15322,7 +15290,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>set()</pre>
+<pre>[0, 1, 2, 3, 4, 0, 1, 2]</pre>
 </div>
 
 </div>
@@ -15336,7 +15304,7 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15355,7 +15323,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0</pre>
+<pre>{0, 1, 2, 3, 4}</pre>
 </div>
 
 </div>
@@ -15367,14 +15335,11 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="6.3.1-Comparing-Sets">6.3.1 Comparing Sets<a class="anchor-link" href="#6.3.1-Comparing-Sets">&#182;</a></h2>
+<h3 id="Creating-an-Empty-Set">Creating an Empty Set<a class="anchor-link" href="#Creating-an-Empty-Set">&#182;</a></h3><ul>
+<li>Must use the <strong><code>set()</code></strong>, because <strong><code>{}</code> represents an empty dictionary</strong>.</li>
+<li>Python displays an empty set as <code>set()</code> to avoid confusion with an empty dictionary (<code>{}</code>).</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -15383,30 +15348,10 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">==</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[74]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -15416,7 +15361,7 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">!=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span>
 </pre></div>
 
     </div>
@@ -15435,7 +15380,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>set()</pre>
 </div>
 
 </div>
@@ -15443,20 +15388,13 @@ words       2
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&lt;</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15475,7 +15413,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>0</pre>
 </div>
 
 </div>
@@ -15483,13 +15421,40 @@ words       2
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Frozenset:-An-Immutable-Set-Type">Frozenset: An Immutable Set Type<a class="anchor-link" href="#Frozenset:-An-Immutable-Set-Type">&#182;</a></h3><ul>
+<li><strong>Sets are <em>mutable</em></strong>—you can add and remove elements.</li>
+<li><strong>Set <em>elements</em> must be <em>immutable</em></strong>; therefore, a set cannot have other sets as elements.</li>
+<li>A <strong>frozenset</strong> is an <em>immutable</em> set—it cannot be modified after you create it, so a set <em>can</em> contain frozensets as elements. </li>
+<li>The built-in function <strong><code>frozenset</code></strong> creates a frozenset from any iterable. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.3.1-Comparing-Sets">6.3.1 Comparing Sets<a class="anchor-link" href="#6.3.1-Comparing-Sets">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparing-for-Equality-and-Inequality">Comparing for Equality and Inequality<a class="anchor-link" href="#Comparing-for-Equality-and-Inequality">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&lt;</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">==</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </pre></div>
 
     </div>
@@ -15517,19 +15482,12 @@ words       2
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">!=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </pre></div>
 
     </div>
@@ -15548,7 +15506,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -15556,13 +15514,23 @@ words       2
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Testing-for-Proper-Subsets">Testing for Proper Subsets<a class="anchor-link" href="#Testing-for-Proper-Subsets">&#182;</a></h3><ul>
+<li>The <code>&lt;</code> operator tests whether the set to its left is a <strong>proper subset</strong> of the one to its right—that is, all the elements in the left operand are in the right operand, and <strong>the sets are not equal</strong>.</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&lt;</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </pre></div>
 
     </div>
@@ -15581,7 +15549,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -15589,20 +15557,13 @@ words       2
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span><span class="o">.</span><span class="n">issubset</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&lt;</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </pre></div>
 
     </div>
@@ -15630,12 +15591,22 @@ words       2
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Testing-for-Improper-Subsets">Testing for Improper Subsets<a class="anchor-link" href="#Testing-for-Improper-Subsets">&#182;</a></h3><ul>
+<li>The <code>&lt;=</code> operator tests whether the set to its left is an <strong>improper subset</strong> of the one to its right—that is, all the elements in the left operand are in the right operand, and <strong>the sets might be equal</strong>:</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">issubset</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </pre></div>
 
     </div>
@@ -15654,7 +15625,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -15662,30 +15633,13 @@ words       2
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.3.3">Section 6.3.3<a class="anchor-link" href="#Section-6.3.3">&#182;</a></h2><ul>
-<li>See the <a href="https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset"><code>set</code> documentation</a> for a complete list of operators and methods.</li>
-</ul>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </pre></div>
 
     </div>
@@ -15704,7 +15658,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 2, 3, 4, 0, 1, 2]</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -15712,16 +15666,46 @@ words       2
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>You may also check for an improper subset with the set method <strong><code>issubset</code></strong>:</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span><span class="o">.</span><span class="n">issubset</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[83]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -15731,7 +15715,7 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">issubset</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span>
 </pre></div>
 
     </div>
@@ -15750,7 +15734,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{0, 1, 2, 3, 4}</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -15758,16 +15742,123 @@ words       2
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Similarly, you may also check for a <strong>proper superset</strong> with <code>&gt;</code> and <strong>improper supersets</strong> with <code>&gt;=</code> or set method <strong><code>issuperset</code></strong>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="The-Argument-to-issubset-or-issuperset-Can-Be-Any-Iterable">The Argument to <code>issubset</code> or <code>issuperset</code> Can Be <em>Any</em> Iterable<a class="anchor-link" href="#The-Argument-to-issubset-or-issuperset-Can-Be-Any-Iterable">&#182;</a></h3><ul>
+<li>When either of these methods receives a non-set iterable argument, it first converts the iterable to a set, then performs the operation.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.3.2-Mathematical-Set-Operations">6.3.2 Mathematical Set Operations<a class="anchor-link" href="#6.3.2-Mathematical-Set-Operations">&#182;</a></h2><ul>
+<li>The method versions receive any iterable and convert it to a set, then perform the corresponding mathematical set operation.</li>
+</ul>
+<table>
+<thead><tr>
+<th style="text-align:left">Operation</th>
+<th style="text-align:left">Set Operator</th>
+<th style="text-align:left">Corresponding Method </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Union</td>
+<td style="text-align:left"><code>|</code></td>
+<td style="text-align:left"><code>union</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Intersection</td>
+<td style="text-align:left"><code>&amp;</code></td>
+<td style="text-align:left"><code>intersection</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Difference</td>
+<td style="text-align:left"><code>-</code></td>
+<td style="text-align:left"><code>difference</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Symmetric Difference</td>
+<td style="text-align:left"><code>^</code></td>
+<td style="text-align:left"><code>symmetric_difference</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Disjoint</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left"><code>isdisjoint</code></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.3.3-Mutable-Set-Operators-and-Methods">6.3.3 Mutable Set Operators and Methods<a class="anchor-link" href="#6.3.3-Mutable-Set-Operators-and-Methods">&#182;</a></h2><ul>
+<li>The operators and methods presented in the preceding section each result in a <em>new</em> set. </li>
+<li>There are also operators and methods that <strong>modify an <em>existing</em> set</strong>. </li>
+<li>See the <a href="https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset"><code>set</code> documentation</a> for a complete list of operators and methods.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Methods-for-Adding-and-Removing-Elements">Methods for Adding and Removing Elements<a class="anchor-link" href="#Methods-for-Adding-and-Removing-Elements">&#182;</a></h3><ul>
+<li>Set method <strong><code>add</code></strong> inserts its argument if the argument is <em>not</em> already in the set; otherwise, the set remains unchanged.</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[85]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 1, 2, 3, 4, 0, 1, 2]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -15777,7 +15868,7 @@ words       2
 <div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15809,7 +15900,7 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{0, 1, 2, 3, 4, 17}</pre>
+<pre>{0, 1, 2, 3, 4}</pre>
 </div>
 
 </div>
@@ -15817,20 +15908,13 @@ words       2
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># KeyError if 3 not in set</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15841,6 +15925,19 @@ words       2
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span>
@@ -15856,7 +15953,64 @@ words       2
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[89]:</div>
+    <div class="prompt output_prompt">Out[90]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{0, 1, 2, 3, 4, 17}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Removing-a-Specific-Element-with-Set-Method-remove">Removing a Specific Element with Set Method <strong><code>remove</code></strong><a class="anchor-link" href="#Removing-a-Specific-Element-with-Set-Method-remove">&#182;</a></h3><ul>
+<li>Removes its argument from the set&mdash;raises a <strong><code>KeyError</code></strong> if the value is not in the set.</li>
+<li>Method <strong><code>discard</code></strong> also removes its argument from the set but <strong>does not cause an exception if the value is not in the set</strong>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># KeyError if 3 not in set</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[92]:</div>
 
 
 
@@ -15874,13 +16028,13 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h3 id="Clearing-a-Set">Clearing a Set<a class="anchor-link" href="#Clearing-a-Set">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -15893,83 +16047,10 @@ words       2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[91]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>set()</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.3.4">Section 6.3.4<a class="anchor-link" href="#Section-6.3.4">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">evens</span> <span class="o">=</span> <span class="p">{</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">item</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">evens</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myset</span>
 </pre></div>
 
     </div>
@@ -15988,6 +16069,72 @@ words       2
 
 
 <div class="output_text output_subarea output_execute_result">
+<pre>set()</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.3.4-Set-Comprehensions">6.3.4 Set Comprehensions<a class="anchor-link" href="#6.3.4-Set-Comprehensions">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">evens</span> <span class="o">=</span> <span class="p">{</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">item</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">evens</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[97]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
 <pre>{2, 4, 6, 8, 10}</pre>
 </div>
 
@@ -16000,15 +16147,23 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr style="height:2px; border:none; color:black; background-color:black;">
+<h1 id="6.4-Dynamic-Visualizations">6.4 Dynamic Visualizations<a class="anchor-link" href="#6.4-Dynamic-Visualizations">&#182;</a></h1><ul>
+<li>The Matplotlib <strong><code>animation</code></strong> module’s <a href="https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.animation.FuncAnimation.html"><strong><code>FuncAnimation</code></strong> function</a> updates a plot <em>dynamically</em>.</li>
+</ul>
+<p><img alt="Sample image of the dynamic die rolling simulation after 64 die rolls" src="./ch06images/Animation_01.png" width="500"/>
+<img alt="Sample image of the dynamic die rolling simulation after 604 die rolls" src="./ch06images/Animation_02.png" width="500"/></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Section-6.4">Section 6.4<a class="anchor-link" href="#Section-6.4">&#182;</a></h1><ul>
-<li>The Matplotlib <strong><code>animation</code></strong> module’s <a href="https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.animation.FuncAnimation.html"><strong><code>FuncAnimation</code></strong> function</a> documentation</li>
+<h3 id="Animation-Frames">Animation Frames<a class="anchor-link" href="#Animation-Frames">&#182;</a></h3><ul>
+<li><code>FuncAnimation</code> drives a <strong>frame-by-frame animation</strong>. </li>
+<li>Each <strong>animation frame</strong> specifies what to change during one plot update. </li>
+<li>Stringing together many updates over time creates an animation. </li>
+<li>This example displays an animation frame every 33 milliseconds—yielding approximately 30 (1000 / 33) frames-per-second. </li>
 </ul>
 
 </div>
@@ -16036,7 +16191,7 @@ words       2
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6.4.2">Section 6.4.2<a class="anchor-link" href="#Section-6.4.2">&#182;</a></h2>
+<h2 id="6.4.2-Implementing-a-Dynamic-Visualization">6.4.2 Implementing a Dynamic Visualization<a class="anchor-link" href="#6.4.2-Implementing-a-Dynamic-Visualization">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -16101,6 +16256,47 @@ words       2
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  <span class="c1"># display window</span>
 </pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Notes-About-the-Preceding-Code-for-Your-Reference">Notes About the Preceding Code for Your Reference<a class="anchor-link" href="#Notes-About-the-Preceding-Code-for-Your-Reference">&#182;</a></h2><h3 id="Function-update">Function <code>update</code><a class="anchor-link" href="#Function-update">&#182;</a></h3><p><code>FuncAnimation</code> calls the <code>update</code> function once per animation frame. This function must receive at least one argument. The parameters are:</p>
+<ul>
+<li><code>frame_number</code>—The next value from <code>FuncAnimation</code>’s <code>frames</code> argument, which we’ll discuss momentarily. Though <code>FuncAnimation</code> requires the <code>update</code> function to have this parameter, we do not use it in this <code>update</code> function.</li>
+<li><code>rolls</code>—The number of die rolls per animation frame.</li>
+<li><code>faces</code>—The die face values used as labels along the graph’s <em>x</em>-axis.</li>
+<li><code>frequencies</code>—The list in which we summarize the die frequencies.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create-a-FuncAnimation-to-Update-the-Bar-Chart-Dynamically">Create a <strong><code>FuncAnimation</code></strong> to Update the Bar Chart Dynamically<a class="anchor-link" href="#Create-a-FuncAnimation-to-Update-the-Bar-Chart-Dynamically">&#182;</a></h3><ul>
+<li><strong>You <em>must</em> store the reference to the animation</strong>; otherwise, Python immediately terminates the animation and returns its memory to the system. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="FuncAnimation-Has-Two-Required-Arguments">FuncAnimation Has Two Required Arguments<a class="anchor-link" href="#FuncAnimation-Has-Two-Required-Arguments">&#182;</a></h3><ul>
+<li><code>figure</code>—the <code>Figure</code> object in which to display the animation, and</li>
+<li><code>update</code>—the function that's <strong>called once per animation frame</strong>.</li>
+</ul>
+<h3 id="Other-Arguments">Other Arguments<a class="anchor-link" href="#Other-Arguments">&#182;</a></h3><ul>
+<li><strong><code>repeat</code></strong>—False terminates the animation after the specified number of frames. If <code>True</code> (the default), when the animation completes it restarts from the beginning.</li>
+<li><strong><code>frames</code></strong>—The total number of animation frames, which controls how many times <code>FunctAnimation</code> calls <code>update</code>. Passing an integer is equivalent to passing a <code>range</code>—for example, <code>600</code> means <code>range(600)</code>. <code>FuncAnimation</code> passes one value from this range as the first argument in each call to <code>update</code>. </li>
+<li><strong><code>interval</code></strong>—The number of milliseconds (33, in this case) between animation frames (the default is 200). After each call to <code>update</code>, <code>FuncAnimation</code> waits 33 milliseconds before making the next call. </li>
+<li><strong><code>fargs</code></strong> (short for “function arguments”)—A tuple of other arguments to pass to the function you specified in <code>FuncAnimation</code>’s second argument. The arguments you specify in the <code>fargs</code> tuple correspond to <code>update</code>’s parameters <code>rolls</code>, <code>faces</code> and <code>frequencies</code>.</li>
+</ul>
 
 </div>
 </div>
