@@ -18,14 +18,20 @@ https://learning.oreilly.com/live-training/courses/python-full-throttle-with-pau
 https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920322351/
 * December 10, 2019:  
 https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920322405/
-  
+* January 14, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920358121/
+* February 11, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920358169/
+* March 10, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920373063/
+
 I'll keep this repository up-to-date with any changes I make for future presentations. 
 
 **These files are for your personal use and may not be redistributed or reposted.**
 
 If you have any questions, open an issue in the Issues tab or email us: deitel at deitel dot com.
 
-Copyright 2019 by Deitel & Associates, Inc. and Pearson Education, Inc. All Rights Reserved. 
+Copyright 2020 by Deitel & Associates, Inc. and Pearson Education, Inc. All Rights Reserved. 
 
 # Setup for Executing the Examples
 If you intend to execute code in parallel with me during the live training (which you don't need to do, but can), you'll want to do one of the following:
@@ -39,7 +45,7 @@ In #2, **be sure to replace `fullPathTo/PythonFullThrottle` with the actual loca
 # Our Books on Which These Examples Are Based
 The content of this course is based on our book <a href=https://amzn.to/2Kd8dQk target="_blank">Python for Programmers</a>, which is a subset of our book <a href=https://amzn.to/2KfCptN target="_blank">Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud.</a>
     
-![Cover image for Python for Programmers](https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg)
+![Cover image for Python for Programmers](http://deitel.com/bookresources/PythonFP/PythonForProgrammersCover.png)
 
 The authors and publisher of this book have used their best efforts in preparing this book. These efforts include the development, research, and testing of the theories and programs to determine their effectiveness. The authors and publisher make no warranty of any kind, expressed or implied, with regard to these programs or to the documentation contained in this book. The authors and publisher shall not be liable in any event for incidental or consequential damages in connection with, or arising out of, the furnishing, performance, or use of these programs.
 
