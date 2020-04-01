@@ -17,7 +17,6 @@ numpy==1.17.4
 numpydoc==0.9.1
 pandas==0.25.3
 pep8==1.7.1
-Pillow==6.2.1
 py==1.8.0
 PyQt5==5.12.3
 PyQt5-sip==4.19.18
