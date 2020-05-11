@@ -26,6 +26,8 @@ https://learning.oreilly.com/live-training/courses/python-full-throttle-with-pau
 https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920373063/
 * April 14, 2020:  
 https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920375579/
+* May 12, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920389224/
 
 I'll keep this repository up-to-date with any changes I make for future presentations. 
 
