@@ -2,38 +2,40 @@
 Source code and Jupyter Notebooks files for my "Python Full Throttle" live training course:
 
 The links below will take you to the course page. If you registered/attended that session, that page is where you can access the archived video.
-* May 30, 2019:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920289395
-* June 24, 2019:  
-https://learning.oreilly.com/live-training/courses/python-r-full-throttle-with-paul-deitel/0636920281498
-* July 22, 2019:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920305385/
-* August 19, 2019:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920305484/
-* September 16, 2019:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920296157/
-* October 15, 2019:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920321477/
-* November 12, 2019:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920322351/
-* December 10, 2019:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920322405/
-* January 14, 2020:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920358121/
-* February 11, 2020:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920358169/
-* March 10, 2020:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920373063/
-* April 14, 2020:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920375579/
-* May 12, 2020:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920389224/
-* June 9, 2020:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920407300/
-* July 14, 2020:  
-https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920444268/
+* September 22, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920425816/
 * August 12, 2020:  
 https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920441311/
+* July 14, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920444268/
+* June 9, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920407300/
+* May 12, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920389224/
+* April 14, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920375579/
+* March 10, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920373063/
+* February 11, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920358169/
+* January 14, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920358121/
+* December 10, 2019:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920322405/
+* November 12, 2019:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920322351/
+* October 15, 2019:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920321477/
+* September 16, 2019:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920296157/
+* August 19, 2019:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920305484/
+* July 22, 2019:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920305385/
+* June 24, 2019:  
+https://learning.oreilly.com/live-training/courses/python-r-full-throttle-with-paul-deitel/0636920281498
+* May 30, 2019:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920289395
 
 I'll keep this repository up-to-date with any changes I make for future presentations. 
 
