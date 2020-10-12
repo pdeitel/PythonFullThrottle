@@ -2,6 +2,8 @@
 Source code and Jupyter Notebooks files for my "Python Full Throttle" live training course:
 
 The links below will take you to the course page. If you registered/attended that session, that page is where you can access the archived video.
+* October 13, 2020:  
+https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920404569/
 * September 22, 2020:  
 https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920425816/
 * August 12, 2020:  
