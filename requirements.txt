@@ -13,7 +13,7 @@ jupyter-nbextensions-configurator==0.4.1
 jupyterlab==2.2.4
 jupyterlab-server==1.2.0
 matplotlib==3.1.2
-notebook==6.0.1
+notebook==6.1.5
 numpy==1.17.4
 numpydoc==0.9.1
 pandas==0.25.3
