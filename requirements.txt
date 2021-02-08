@@ -1,4 +1,4 @@
-python==3.8.6
+python>=3.8
 ipython==7.20.0
 jupyterlab==3.0.7
 matplotlib==3.3.4
