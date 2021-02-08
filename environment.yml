@@ -1,0 +1,14 @@
+name: py38_clean
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - ipympl
+  - ipython
+  - ipywidgets
+  - jupyterlab
+  - matplotlib
+  - nodejs
+  - numpy
+  - python=3.8
+  - seaborn
