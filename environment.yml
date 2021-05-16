@@ -1,4 +1,4 @@
-name: py38_clean
+name: py39
 channels:
   - conda-forge
   - defaults
@@ -10,5 +10,5 @@ dependencies:
   - matplotlib
   - nodejs
   - numpy
-  - python=3.8
+  - python=3.9
   - seaborn
