@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>StartHere</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Python3.8-3.9</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,256 +14259,568 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&copy; 2021 by Pearson Education, Inc. All Rights Reserved. The content in this notebook is based on the textbook <a href="https://amzn.to/2YU0QTJ"><strong>Intro Python for Computer Science and Data Science</strong></a> and our professional book <a href="https://amzn.to/2VvdnxE"><strong>Python for Programmers</strong></a> — Please do not purchase both. The professional book is a subset of the textbook.</p>
+<p>&copy; 2021 by Pearson Education, Inc. All Rights Reserved. The content in this notebook is based on the book <a href="https://amzn.to/2VvdnxE"><strong>Python for Programmers</strong></a>.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Python-Full-Throttle">Python Full Throttle<a class="anchor-link" href="#Python-Full-Throttle">&#182;</a></h1><p><img alt="Python Fundamentals LiveLessons cover" src="./images/course_image.jpg" width="300" style="float:right;"/></p>
-<p><strong>Paul Deitel, CEO,<br>
-Deitel &amp; Associates, Inc.</strong></p>
+<h1 id="Python-3.8-Features">Python 3.8 Features<a class="anchor-link" href="#Python-3.8-Features">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Positional-Only-Function-Parameters">Positional-Only Function Parameters<a class="anchor-link" href="#Positional-Only-Function-Parameters">&#182;</a></h2><ul>
+<li>Parameters that <strong>may not be specified with keyword arguments</strong></li>
+<li>The following <code>average</code> function may be called with positional or keyword arguments</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span> <span class="o">+</span> <span class="n">num3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">average</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>  <span class="c1"># positional arguments</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>14.0</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">average</span><span class="p">(</span><span class="n">num3</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">num1</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">num2</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># keyword arguments</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>14.0</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><a href="https://deitel.com">https://deitel.com</a>  </li>
-<li><a href="mailto:paul@deitel.com">paul@deitel.com</a>  </li>
-<li><a href="https://deitel.com/contact-us">https://deitel.com/contact-us</a>  </li>
-<li><a href="https://facebook.com/DeitelFan">https://facebook.com/DeitelFan</a>  </li>
-<li><a href="https://twitter.com/deitel">https://twitter.com/deitel</a> (@deitel)  </li>
-<li><a href="https://linkedin.com/company/deitel-&amp;-associates">https://linkedin.com/company/deitel-&amp;-associates</a></li>
-<li><a href="https://youtube.com/DeitelTV">https://youtube.com/DeitelTV</a></li>
+<li>All parameters before a <code>/</code> in the parameter list are positional parameters</li>
 </ul>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num3</span><span class="p">,</span> <span class="o">/</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span> <span class="o">+</span> <span class="n">num3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">average</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>  <span class="c1"># positional arguments</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>14.0</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">average</span><span class="p">(</span><span class="n">num2</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">num1</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">num3</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>  <span class="c1"># keyword arguments</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-818a75517228&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>average<span class="ansi-blue-fg">(</span>num2<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">,</span> num1<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">7</span><span class="ansi-blue-fg">,</span> num3<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">15</span><span class="ansi-blue-fg">)</span>  <span class="ansi-red-fg"># keyword arguments</span>
+
+<span class="ansi-red-fg">TypeError</span>: average() got some positional-only arguments passed as keyword arguments: &#39;num1, num2, num3&#39;</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
+<h2 id="Self-Documenting-f-strings">Self-Documenting f-strings<a class="anchor-link" href="#Self-Documenting-f-strings">&#182;</a></h2><ul>
+<li>In Section 5.4, we presented the following snippets that swapped two variables values and displayed the results:</li>
+</ul>
+
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number1</span> <span class="o">=</span> <span class="mi">99</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number2</span> <span class="o">=</span> <span class="mi">22</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span> <span class="o">=</span> <span class="p">(</span><span class="n">number2</span><span class="p">,</span> <span class="n">number1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;number1=</span><span class="si">{</span><span class="n">number1</span><span class="si">}</span><span class="s1">; number2=</span><span class="si">{</span><span class="n">number2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>number1=22; number2=99
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="My-Upcoming-O'Reilly-Live-Training-Courses">My Upcoming O'Reilly Live Training Courses<a class="anchor-link" href="#My-Upcoming-O'Reilly-Live-Training-Courses">&#182;</a></h1><p><a href="https://deitel.com/LearnWithDeitel">https://deitel.com/LearnWithDeitel</a></p>
-<p><strong>Open for enrollment now:</strong></p>
 <ul>
-<li><strong>May 25</strong>&mdash;Python Data Science Full Throttle </li>
-<li><strong>June 8</strong>&mdash;Java Full Throttle  </li>
-<li><strong>June 15</strong>&mdash;Python Full Throttle   </li>
-<li><strong>June 22</strong>&mdash;Python Data Science Full Throttle </li>
-<li>July/August schedule coming soon</li>
+<li>Python 3.8 introduces <strong>self-documenting f-strings</strong> that enable you to express the preceding f-string more concisely as:</li>
 </ul>
-<p>My Python courses run every 4-5 weeks and my Java course runs every 7-9 weeks.</p>
-<p><strong>C++20 Full Throttle</strong> coming Fall 2021 (and possibly <strong>C Full Throttle</strong>)</p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">number1</span><span class="si">=}</span><span class="s1">; </span><span class="si">{</span><span class="n">number2</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>number1=22; number2=99
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Part-2-of-This-Course:-Python-Data-Science-and-AI-Full-Throttle">Part 2 of This Course: Python Data Science and AI Full Throttle<a class="anchor-link" href="#Part-2-of-This-Course:-Python-Data-Science-and-AI-Full-Throttle">&#182;</a></h1><p><strong>Fast-paced introduction</strong> to some of today's most compelling, leading-edge <strong>data science</strong> and <strong>artificial intelligence</strong> and technologies:</p>
 <ul>
-<li><strong>Natural Language Processing</strong></li>
-<li><strong>Data Mining Twitter</strong></li>
-<li><strong>IBM Watson and Cognitive Computing</strong></li>
-<li><strong>Machine Learning</strong></li>
-<li><strong>Deep Learning</strong></li>
-<li><strong>MongoDB NoSQL Document Database</strong></li>
-<li><strong>Spark Streaming</strong></li>
-<li><strong>Internet of Things (IoT) Streaming Data</strong></li>
+<li>When Python 3.8 encounters the = to the right of the variable name in the placeholder <strong><code>{number1=}</code></strong>, it inserts into the string the variable’s name and the equal sign as literal characters, followed immediately by the variable’s value. </li>
+<li>As in the f-strings you’ve seen previously, the placeholder may contain format specifiers: </li>
 </ul>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperature</span> <span class="o">=</span> <span class="mf">98.78573</span>
+</pre></div>
+
+     </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
 </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="New-on-O'Reilly:C++20-LiveLessons-Sneak-Peek-andC++20-for-Programmers-Rough-Cut-E-Bookhttps://deitel.com/LearnWithDeitel">New on O'Reilly:<br /><strong>C++20 LiveLessons</strong> Sneak Peek and<br /><strong>C++20 for Programmers</strong> Rough Cut E-Book<br /><a href="https://deitel.com/LearnWithDeitel">https://deitel.com/LearnWithDeitel</a><a class="anchor-link" href="#New-on-O'Reilly:C++20-LiveLessons-Sneak-Peek-andC++20-for-Programmers-Rough-Cut-E-Bookhttps://deitel.com/LearnWithDeitel">&#182;</a></h1><p><a style="float:left; padding-right:10px; width: 200px;" href="https://learning.oreilly.com/videos/c20-fundamentals/9780136875185"><img alt="C++ Fundamentals LiveLessons cover" src="./images/cpp20ll.jpg" border="1"/></a></p>
-<p><a style="float:left; padding-right:10px; width:184px;" href="https://learning.oreilly.com/library/view/c20-for-programmers/9780136905776/"><img alt="C++20 for Programmers cover" src="./images/c-plus-plus-20-for-programmers.jpg" border="1"/></a></p>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">temperature</span><span class="si">=:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>temperature=98.79
+</pre>
+</div>
+</div>
 
 </div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
+<h2 id="Assignment-Expressions&#8212;Walrus-Operator-:=">Assignment Expressions&#8212;Walrus Operator <code>:=</code><a class="anchor-link" href="#Assignment-Expressions&#8212;Walrus-Operator-:=">&#182;</a></h2><ul>
+<li>Also called the “walrus operator”</li>
+<li><strong>"Try to limit use of the walrus operator to clean cases that reduce complexity and improve readability."</strong>—From: <a href="https://docs.python.org/3/whatsnew/3.8.html">https://docs.python.org/3/whatsnew/3.8.html</a></li>
+<li>Consider the following code from Section 8.12.3, which we modified to use an <code>if</code> statement rather than a conditional expression:</li>
+</ul>
+
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Python is fun&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The matching text was &quot;</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;not found&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>The matching text was &#34;Python&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="C-How-to-Program,-9/e:-with-Application-Programming-and-Systems-Programming-Case-Studies">C How to Program, 9/e: with Application Programming and Systems Programming Case Studies<a class="anchor-link" href="#C-How-to-Program,-9/e:-with-Application-Programming-and-Systems-Programming-Case-Studies">&#182;</a></h1><p><strong>Available late March/early April</strong>: e-mail <strong>paul@deitel.com</strong> with questions.</p>
-<p><a style="float:left; padding-right:25px; width: 200px;" href="https://deitel.com/c-how-to-program-9-e/"><img alt="C How to Program, 9/e" src="https://deitel.com/wp-content/uploads/2021/02/c-how-to-program-9-e.jpg" border="1"/></a></p>
-<p><strong>A Few Key Features:</strong></p>
 <ul>
-<li>Rich coverage of programming fundamentals</li>
-<li><strong>20+ rich case studies from computer science, artificial intelligence, data science and other fields</strong></li>
-<li>350+ integrated self-check exercises with answers</li>
-<li>Enhanced security/data science per ACM™/IEEE™ guidelines</li>
-<li>Use free open-source libraries and tools</li>
-<li>gnuplot visualization</li>
-<li>raylib game programming</li>
-<li>AI: Machine learning, natural language processing</li>
-<li>Robotics and 3D graphics with the Webots simulator</li>
+<li>Using <code>:=</code> enables you to combine the assignment into the <code>if</code> statement's condition</li>
+<li><code>result</code> receives either a match object or <code>None</code> if there is no match then the <code>if</code>...<code>else</code> statement executes accordingly</li>
 </ul>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">result</span> <span class="o">:=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Python is fun&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The matching text was &quot;</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;Python&quot; was not found&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
 </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Multitiered-Learning-Approach">Multitiered Learning Approach<a class="anchor-link" href="#Multitiered-Learning-Approach">&#182;</a></h1><ul>
-<li>No need to take extensive notes.</li>
-<li>A video of this presentation will be available 24 hours after the course—link located in the GitHub repository's README.md file.</li>
-</ul>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>The matching text was &#34;Python&#34;
+</pre>
+</div>
+</div>
 
 </div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Deitel-Python-on-O'Reilly:https://deitel.com/LearnWithDeitel">Deitel Python on O'Reilly:<br /><a href="https://deitel.com/LearnWithDeitel">https://deitel.com/LearnWithDeitel</a><a class="anchor-link" href="#Deitel-Python-on-O'Reilly:https://deitel.com/LearnWithDeitel">&#182;</a></h1><div style="float: left; padding-right:10px;text-align:center"><a href="https://learning.oreilly.com/videos/python-fundamentals/9780135917411"><img alt="Python Fundamentals LiveLessons cover" src="./images/PythonFundamentalsLiveLessons.jpg" width="200" border="1"/></a></br>50+ hours of in-depth videos</div>
-<div style="float: left; padding-right:10px;text-align:center"><a href="https://learning.oreilly.com/library/view/intro-to-python/9780135404799/"><img alt="Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud" src="./images/IntroToPythonCover.png" width="195" border="1"></a><br/><a href="https://amzn.to/2LiDCmt">Buy on Amazon</a></div></div>
-<div style="float: left; padding-right:10px;text-align:center"><a href="https://learning.oreilly.com/library/view/python-for-programmers/9780135231364"><img alt="Python for Programmers cover" src="./images/PyFPCover.png" width="184" border="1"/></a><br/><a href="https://amzn.to/2VvdnxE">Buy on Amazon</a></div>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Please do not buy both books. <strong>Python for Programmers</strong> is a subset of <strong>Intro to Python</strong>.</p>
 
 </div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">result</span> <span class="o">:=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;fun!&#39;</span><span class="p">,</span> <span class="s1">&#39;Python is fun&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The matching text was &quot;</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;fun!&quot; was not found&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&#34;fun!&#34; was not found
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Our-Python-Textbook-for-College-Courses"><a href="https://learning.oreilly.com/library/view/intro-to-python/9780135404799/">Our Python Textbook for College Courses</a><a class="anchor-link" href="#Our-Python-Textbook-for-College-Courses">&#182;</a></h1><p><a style="float: left; padding-right:25px" href="https://amzn.to/2LiDCmt"><img alt="Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud" src="./images/IntroToPythonCover.png" width="150" border="1"></a></p>
 <ul>
-<li><strong>College Professors/Instructors</strong>:<br>
-<a href="https://www.pearson.com/us/about/news-events/events/2019/04/intro-to-python-for-computer-science-and-data-science.html">Pre-Recorded Webinar Overview</a>.  </li>
-<li><a href="https://www.pearson.com/replocator"><strong>Request an examination copy</strong></a> from your Pearson rep</li>
-<li>Full color</li>
-<li>880 pages&mdash;240 more than <strong>Python for Programmers</strong></li>
-<li><strong>Programming fundamentals</strong>, including <strong>program development</strong></li>
-<li><strong>557 self-check exercises</strong></li>
-<li><strong>471 end-of-chapter exercises and projects</strong>—Good for term projects, directed studies, capstone projects and thesis research topics across many fields</li>
-<li><strong>More Info:</strong>
-<a href="https://deitel.com/intro-to-python-for-computer-science-and-data-science/">https://deitel.com/intro-to-python-for-computer-science-and-data-science/</a></li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Rhythm-of-the-Course">Rhythm of the Course<a class="anchor-link" href="#Rhythm-of-the-Course">&#182;</a></h1><ul>
-<li><strong>Whirlwind tour of Python 3</strong><ul>
-<li>Python 2 was end of life as of April 2020 and should no longer be used</li>
-</ul>
-</li>
-<li><strong>Lecture only, source-code focused presentation</strong><ul>
-<li>Six lecture segments and three breaks</li>
-<li>Two 7-minute breaks in first three hours</li>
-<li>45-minute meal break </li>
-<li>Two 7-minute breaks in last three hours</li>
-</ul>
-</li>
-<li><a href="https://learning.oreilly.com/library/view/python-for-programmers/9780135231364/"><strong>Python for Programmers</strong></a> is <strong>indexed extensively</strong>. <ul>
-<li>If you don't see a topic here or need more detail, check the book's index to help locate the topic in our <a href="https://learning.oreilly.com/videos/python-fundamentals/9780135917411"><strong>Python Fundamentals videos</strong></a> or the book.</li>
-</ul>
-</li>
-<li>Questions after the course? <strong><a href="mailto:paul@deitel.com">paul@deitel.com</a></strong></li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Code-and-Jupyter-Notebooks-for-Today's-Presentation">Code and Jupyter Notebooks for Today's Presentation<a class="anchor-link" href="#Code-and-Jupyter-Notebooks-for-Today's-Presentation">&#182;</a></h1><ul>
-<li>Presenting in <strong>Jupyter Notebooks</strong><ul>
-<li>Browser-based tool.</li>
-<li>Can combine <strong>executable code, text, images, audio and video</strong>.</li>
-</ul>
-</li>
-<li><strong><a href="https://github.com/pdeitel/PythonFullThrottle">https://github.com/pdeitel/PythonFullThrottle</a></strong> contains all the code and Jupyter Notebooks.</li>
-<li><strong><code>PythonFullThrottle</code></strong> folder contains this <strong><code>StartHere.ipynb</code></strong> and <strong>sufolders <code>ch01</code>-<code>ch10</code></strong> for the 10 sections of today's presentation.</li>
-<li>Each notebook also is <strong>provided as an HTML document</strong> that you can simply load in your browser&mdash;the code in these is <strong>not</strong> executable.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Running-the-Examples-in-a-Zero-Install-Environment">Running the Examples in a Zero-Install Environment<a class="anchor-link" href="#Running-the-Examples-in-a-Zero-Install-Environment">&#182;</a></h1><ul>
-<li>To run today's examples in a Zero-Install environment that you can access via your web browser, use this MyBinder link: <blockquote><p><a href="https://mybinder.org/v2/gh/pdeitel/PythonFullThrottle/master?urlpath=lab">https://mybinder.org/v2/gh/pdeitel/PythonFullThrottle/master?urlpath=lab</a></p>
-</blockquote>
-</li>
-<li>This will handle all but one or two of the examples.</li>
-<li>When it loads, click Build. </li>
-<li>When the build finishes, click Reload. </li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Anaconda-Python-Distribution"><a href="https://www.anaconda.com/products/individual">Anaconda Python Distribution</a><a class="anchor-link" href="#Anaconda-Python-Distribution">&#182;</a></h1><ul>
-<li><strong>Windows</strong>, <strong>macOS</strong> and <strong>Linux</strong></li>
-<li><strong>Python</strong>, the <strong>IPython interpreter</strong> and <strong>Jupyter Notebooks</strong></li>
-<li>Includes wide range of <strong>software packages</strong> and <strong>libraries</strong> commonly used in <strong>Python programming</strong>, <strong>scientific computing</strong>, <strong>data science</strong>, <strong>AI</strong> and more</li>
-<li>Currently Python 3.8</li>
-<li>For setup instructions, see our <em>Python for Programmers</em> <a href="https://learning.oreilly.com/library/view/python-for-programmers/9780135231364/pref03.xhtml#pref03">Before You Begin section</a></li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Kite:-AI-Based-Documentation-and-Code-Completion">Kite: AI-Based Documentation and Code Completion<a class="anchor-link" href="#Kite:-AI-Based-Documentation-and-Code-Completion">&#182;</a></h1><ul>
-<li><a href="https://www.kite.com/pro/#pro-plans-pricing">https://www.kite.com/pro/#pro-plans-pricing</a> </li>
-<li>Works with many IDEs and <strong>now with JupyterLab</strong></li>
-<li>Use the code <strong>Paul</strong> (right side of the checkout page) for a discounted subscription when you sign up.</li>
-<li><strong>I do not receive any money for this.</strong> <ul>
-<li>Just a cool tool that I though you might find handy.</li>
+<li>Some of the uses shown at <a href="https://docs.python.org/3/whatsnew/3.8.html">https://docs.python.org/3/whatsnew/3.8.html</a>:<ul>
+<li>Assignment in a condition so you can then use the result in the subsequent suite</li>
+<li>Calling regular expression functions in conditions, then using the resulting match object (if there is one) in the subsequent suite</li>
+<li>Assignments in the conditions of sentinel controlled <code>while</code> loops (such as for reading from a file)—after a read, test if the sentinel was encountered and if not, process the read content in the suite</li>
+<li>Assignments in the condition of a list, dictionary or set comprehension's <code>if</code> filter clause, so you can then use the assigned value to create what’s inserted into the new list, dictionary or set</li>
 </ul>
 </li>
 </ul>
@@ -14517,145 +14829,347 @@ Deitel &amp; Associates, Inc.</strong></p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
+<h1 id="Python-3.9-Features">Python 3.9 Features<a class="anchor-link" href="#Python-3.9-Features">&#182;</a></h1>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Using-Docker-and-the-jupyter/scipy-notebook-Container">Using Docker and the <code>jupyter/scipy-notebook</code> Container<a class="anchor-link" href="#Using-Docker-and-the-jupyter/scipy-notebook-Container">&#182;</a></h1><ul>
-<li>If you prefer not to install Anaconda, you can use a Docker container.</li>
-<li>In the following command, <strong>replace <code>FULL_PATH_TO/PythonFullThrottle</code></strong> with the full path to the folder <strong><code>PythonFullThrottle</code></strong> on your system. <blockquote>
-<pre><code>docker run -p 8888:8888 -it --user root \
-  -v FULL_PATH_TO/PythonFullThrottle:/home/jovyan/work \
-  jupyter/scipy-notebook:latest start.sh jupyter lab</code></pre>
-</blockquote>
-</li>
-<li>On my system, <strong>FULL_PATH_TO/PythonFullThrottle</strong> is<blockquote>
-<pre><code>/Users/pauldeitel/Documents/PythonFullThrottle/PythonFullThrottle/</code></pre>
-</blockquote>
-</li>
-<li>Downloads the container if necessary (took about 7-10 minutes on my system).</li>
-<li>Attaches this presentation's files to container's <code>/home/jovyan/work</code> folder.</li>
-<li>Any work you save there will be saved to the <strong><code>PythonFullThrottle</code></strong> folder on your system.</li>
-</ul>
+<h2 id="Removing-prefix/suffix-on-a-string">Removing prefix/suffix on a string<a class="anchor-link" href="#Removing-prefix/suffix-on-a-string">&#182;</a></h2><p><a href="https://www.python.org/dev/peps/pep-0616/">https://www.python.org/dev/peps/pep-0616/</a></p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;prefix$$$suffix&#39;</span>
+</pre></div>
+
+     </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
 </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Python-Full-Throttle-Sections">Python Full Throttle Sections<a class="anchor-link" href="#Python-Full-Throttle-Sections">&#182;</a></h1><p>These correspond to lessons and chapters in our videos and books on O'Reilly</p>
-<ol>
-<li><a href="ch01/Ch01.ipynb">Introduction and Test-Drive of the IPython Interpreter</a> </li>
-<li><a href="ch02/Ch02.ipynb">Introduction to Python</a> </li>
-<li><a href="ch03/Ch03.ipynb">Control Statements</a> </li>
-<li><a href="ch04/Ch04.ipynb">Functions</a></li>
-<li><a href="ch05/Ch05.ipynb">Sequences: Lists and Tuples; Functional-Style Programming; Static Visualization</a> </li>
-<li><a href="ch06/Ch06.ipynb">Dictionaries and Sets; Dynamic Visualization</a> </li>
-<li><a href="ch07/Ch07.ipynb">Array-Oriented Programming with NumPy</a> </li>
-<li><a href="ch08/Ch08.ipynb">Strings: A Deeper Look; Regular Expressions</a> </li>
-<li><a href="ch09/Ch09.ipynb">Files and Exceptions; JSON Serialization; CSV Files</a> </li>
-<li><a href="ch10/Ch10.ipynb">Object-Oriented Programming; Card-Shuffling-and-Dealing Simulation</a></li>
-<li>Wrap-Up</li>
-</ol>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="s1">&#39;prefix&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;$$$suffix&#39;</pre>
+</div>
 
 </div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Wrap-Up">Wrap-Up<a class="anchor-link" href="#Wrap-Up">&#182;</a></h1><h3 id="Thank-You-for-Coming!">Thank You for Coming!<a class="anchor-link" href="#Thank-You-for-Coming!">&#182;</a></h3><ul>
-<li>Please fill out the <strong>course survey</strong>. <ul>
-<li>All comments, criticisms and suggestions are welcome.</li>
-</ul>
-</li>
-<li>Like what you saw? <strong>Please send testimonial comments to paul@deitel.com</strong>. We'd love to feature your comments in our marketing for future courses.</li>
-</ul>
 
 </div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="My-Upcoming-O'Reilly-Live-Training-Courses">My Upcoming O'Reilly Live Training Courses<a class="anchor-link" href="#My-Upcoming-O'Reilly-Live-Training-Courses">&#182;</a></h1><p><a href="https://deitel.com/LearnWithDeitel">https://deitel.com/LearnWithDeitel</a></p>
-<p><strong>Open for enrollment now:</strong></p>
-<ul>
-<li><strong>May 25</strong>&mdash;Python Data Science Full Throttle </li>
-<li><strong>June 8</strong>&mdash;Java Full Throttle  </li>
-<li><strong>June 15</strong>&mdash;Python Full Throttle   </li>
-<li><strong>June 22</strong>&mdash;Python Data Science Full Throttle </li>
-<li>July/August schedule coming soon</li>
-</ul>
-<p>My Python courses run every 4-5 weeks and my Java course runs every 7-9 weeks.</p>
-<p><strong>C++20 Full Throttle</strong> coming soon (and possibly <strong>C Full Throttle</strong>)</p>
 
 </div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">removesuffix</span><span class="p">(</span><span class="s1">&#39;suffix&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
 </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Python-Data-Science-and-AI-Full-Throttle">Python Data Science and AI Full Throttle<a class="anchor-link" href="#Python-Data-Science-and-AI-Full-Throttle">&#182;</a></h1><p><strong>Fast-paced introduction</strong> to some of today's most compelling, leading-edge <strong>data science</strong> and <strong>artificial intelligence</strong> and technologies:</p>
-<ul>
-<li><strong>Natural Language Processing</strong></li>
-<li><strong>Data Mining Twitter</strong></li>
-<li><strong>IBM Watson and Cognitive Computing</strong></li>
-<li><strong>Machine Learning</strong></li>
-<li><strong>Deep Learning</strong></li>
-<li><strong>MongoDB NoSQL Document Database</strong></li>
-<li><strong>Spark Streaming</strong></li>
-<li><strong>Internet of Things (IoT) Streaming Data</strong></li>
-</ul>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;prefix$$$&#39;</pre>
+</div>
 
 </div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Deitel-Python-on-O'Reilly:https://deitel.com/LearnWithDeitel">Deitel Python on O'Reilly:<br /><a href="https://deitel.com/LearnWithDeitel">https://deitel.com/LearnWithDeitel</a><a class="anchor-link" href="#Deitel-Python-on-O'Reilly:https://deitel.com/LearnWithDeitel">&#182;</a></h1><div style="float: left; padding-right:10px;text-align:center"><a href="https://learning.oreilly.com/videos/python-fundamentals/9780135917411"><img alt="Python Fundamentals LiveLessons cover" src="./images/PythonFundamentalsLiveLessons.jpg" width="200" border="1"/></a></br>50+ hours of in-depth videos</div>
-<div style="float: left; padding-right:10px;text-align:center"><a href="https://learning.oreilly.com/library/view/intro-to-python/9780135404799/"><img alt="Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud" src="./images/IntroToPythonCover.png" width="195" border="1"></a><br/><a href="https://amzn.to/2LiDCmt">Buy on Amazon</a></div></div>
-<div style="float: left; padding-right:10px;text-align:center"><a href="https://learning.oreilly.com/library/view/python-for-programmers/9780135231364"><img alt="Python for Programmers cover" src="./images/PyFPCover.png" width="184" border="1"/></a><br/><a href="https://amzn.to/2VvdnxE">Buy on Amazon</a></div>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr style="height:2px; border:none; color:#000; background-color:#000;">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Contact-Info">Contact Info<a class="anchor-link" href="#Contact-Info">&#182;</a></h1><ul>
-<li><strong>Questions? <a href="mailto:paul@deitel.com">paul@deitel.com</a></strong></li>
-<li><a href="https://www.deitel.com/DeitelFan">Facebook</a></li>
-<li><a href="https://twitter.com/deitel">Twitter</a> (@deitel)</li>
-<li><a href="https://linkedin.com/company/deitel-&amp;-associates">LinkedIn</a></li>
-<li><a href="https://youtube.com/DeitelTV">YouTube</a></li>
-</ul>
 
 </div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&copy; 2021 by Pearson Education, Inc. All Rights Reserved. The content in this notebook is based on the textbook <a href="https://amzn.to/2YU0QTJ"><strong>Intro Python for Computer Science and Data Science</strong></a> and our professional book <a href="https://amzn.to/2VvdnxE"><strong>Python for Programmers</strong></a> — Please do not purchase both. The professional book is a subset of the textbook.</p>
+<h2 id="Dictionary-union-operators-|-and-|=">Dictionary union operators | and |=<a class="anchor-link" href="#Dictionary-union-operators-|-and-|=">&#182;</a></h2><p><a href="https://www.python.org/dev/peps/pep-0584">https://www.python.org/dev/peps/pep-0584</a></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">capitals1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Belgium&#39;</span><span class="p">:</span> <span class="s1">&#39;Brussels&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;Haiti&#39;</span><span class="p">:</span> <span class="s1">&#39;Port-au-Prince&#39;</span><span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">capitals1</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;Belgium&#39;: &#39;Brussels&#39;, &#39;Haiti&#39;: &#39;Port-au-Prince&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">capitals2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Nepal&#39;</span><span class="p">:</span> <span class="s1">&#39;Kathmandu&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;Uruguay&#39;</span><span class="p">:</span> <span class="s1">&#39;Montevideo&#39;</span><span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">capitals2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;Nepal&#39;: &#39;Kathmandu&#39;, &#39;Uruguay&#39;: &#39;Montevideo&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">capitals1</span> <span class="o">|</span> <span class="n">capitals2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;Belgium&#39;: &#39;Brussels&#39;,
+ &#39;Haiti&#39;: &#39;Port-au-Prince&#39;,
+ &#39;Nepal&#39;: &#39;Kathmandu&#39;,
+ &#39;Uruguay&#39;: &#39;Montevideo&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">capitals1</span> <span class="o">|=</span> <span class="n">capitals2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">capitals1</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;Belgium&#39;: &#39;Brussels&#39;,
+ &#39;Haiti&#39;: &#39;Port-au-Prince&#39;,
+ &#39;Nepal&#39;: &#39;Kathmandu&#39;,
+ &#39;Uruguay&#39;: &#39;Montevideo&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">capitals2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;Nepal&#39;: &#39;Kathmandu&#39;, &#39;Uruguay&#39;: &#39;Montevideo&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&copy; 2021 by Pearson Education, Inc. All Rights Reserved. The content in this notebook is based on the book <a href="https://amzn.to/2VvdnxE"><strong>Python for Programmers</strong></a>.</p>
 
 </div>
 </div>
