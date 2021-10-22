@@ -6,6 +6,7 @@ The links below will take you to the course page. If you registered/attended tha
 * August 17, 2021: https://learning.oreilly.com/attend/python-full-throttle-with-paul-deitel/0636920274667/0636920058803/
 * July 20, 2021: https://learning.oreilly.com/attend/python-full-throttle-with-paul-deitel/0636920274667/0636920056743/
 * June 15, 2021: https://learning.oreilly.com/attend/python-full-throttle-with-paul-deitel/0636920274667/0636920054942/
+* May 18, 2021: https://learning.oreilly.com/live-events/python-full-throttle-with-paul-deitel/0636920274667/0636920054002/
 * April 13, 2021: https://learning.oreilly.com/attend/python-full-throttle-with-paul-deitel/0636920274667/0636920052359/
 * March 16, 2021: https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920052225/
 * February 9, 2021: https://learning.oreilly.com/live-training/courses/python-full-throttle-with-paul-deitel/0636920051477/
