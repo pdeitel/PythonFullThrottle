@@ -2,6 +2,7 @@
 Source code and Jupyter Notebooks files for my "Python Full Throttle" live training course:
 
 The links below will take you to the course page. If you registered/attended that session, that page is where you can access the archived video.
+* Deember 7, 2021: https://learning.oreilly.com/live-events/python-full-throttle-with-paul-deitel-a-one-day-fast-paced-code-intensive-python-presentation/0636920274667/0636920062987/
 * November 9, 2021: https://learning.oreilly.com/live-events/python-full-throttle-with-paul-deitel/0636920274667/0636920062135/
 * September 21, 2021: https://learning.oreilly.com/live-events/python-full-throttle-with-paul-deitel/0636920274667/0636920059471/
 * August 17, 2021: https://learning.oreilly.com/attend/python-full-throttle-with-paul-deitel/0636920274667/0636920058803/
@@ -43,7 +44,7 @@ Copyright 2021 by Deitel & Associates, Inc. and Pearson Education, Inc. All Righ
 # Setup for Executing the Examples
 If you intend to execute code in parallel with me during the live training (which you don't need to do, but can), you'll want to do one of the following:
 
-1. For a **zero-install environment**, you can go to the following mybinder.org link, which will allocate a cloud-based environment and load this repository's Jupyter Notebooks .
+1. For a **zero-install environment**, you can go to the following mybinder.org link, which will allocate a cloud-based environment and load this repository's Jupyter Notebooks https://mybinder.org/v2/gh/pdeitel/PythonFullThrottle/master?urlpath=lab.
 2. You can run everything locally on your computer. To do so, install the Anaconda Python Distribution for Python 3.8 at https://www.anaconda.com/distribution/#download-section
 3. You can use one of the Jupyter team's preconfigured Docker containrs:
 > `docker run -p 8888:8888 -it --user root -v fullPathTo/PythonFullThrottle:/home/jovyan/work jupyter/scipy-notebook:latest start.sh jupyter lab`
