@@ -5,26 +5,15 @@ from decimal import Decimal
 class CommissionEmployee:
     """An employee who gets paid commission based on gross sales."""
 
-    def __init__(self, first_name, last_name, ssn, 
-                 gross_sales, commission_rate):
+    def __init__(self, name, gross_sales, commission_rate):
         """Initialize CommissionEmployee's attributes."""
-        self._first_name = first_name
-        self._last_name = last_name
-        self._ssn = ssn
+        self._name = name
         self.gross_sales = gross_sales  # validate via property
         self.commission_rate = commission_rate  # validate via property
 
     @property
-    def first_name(self):
-        return self._first_name
-
-    @property
-    def last_name(self):
-        return self._last_name
-
-    @property
-    def ssn(self):
-        return self._ssn
+    def name(self):
+        return self._name
 
     @property
     def gross_sales(self):
@@ -57,9 +46,7 @@ class CommissionEmployee:
 
     def __repr__(self):
         """Return string representation for repr()."""
-        return ('CommissionEmployee: ' + 
-            f'{self.first_name} {self.last_name}\n' +
-            f'social security number: {self.ssn}\n' +
+        return (f'CommissionEmployee: {self.name}\n' + 
             f'gross sales: {self.gross_sales:.2f}\n' +
             f'commission rate: {self.commission_rate:.2f}')
 

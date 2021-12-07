@@ -12,11 +12,11 @@ class Card:
 
     face: str
     suit: str
-
+    
     @property
     def image_name(self):
         """Return the Card's image file name."""
-        return str(self).replace(' ', '_') + '.png'
+        return str(self).replace(' ', '_').lower() + '.png'
 
     def __str__(self):
         """Return string representation for str()."""

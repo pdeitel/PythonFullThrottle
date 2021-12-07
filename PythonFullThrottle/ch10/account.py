@@ -14,7 +14,7 @@ class Account:
 
         self.name = name
         self.balance = balance
-
+        
     def deposit(self, amount):
         """Deposit money to the account."""
 
