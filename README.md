@@ -57,7 +57,7 @@ In #3, **be sure to replace `fullPathTo/PythonFullThrottle` with the actual loca
 # Our Books on Which These Examples Are Based
 The content of this course is based on our book <a href=https://amzn.to/2Kd8dQk target="_blank">Python for Programmers</a>, which is a subset of our book <a href=https://amzn.to/2KfCptN target="_blank">Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud.</a> Both are available to O'Reilly Online Learning subscribers. See all our recent content and webinars on O'Reilly at https://deitel.com/LearnWithDeitel
     
-<a href="https://deitel.com/python-for-programmers-book/"><img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" alt="Cover image for Python for Programmers" width="150px"/></a>
+<a href="https://deitel.com/python-for-programmers-book/"><img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" alt="Cover image for Python for Programmers" width="150px" border="1px"/></a>
 
 <a href="https://deitel.com/intro-to-python-for-computer-science-and-data-science/"><img src="https://deitel.com/wp-content/uploads/2020/01/intro-to-python-for-computer-science-and-data-science.jpg" alt="Cover image for Intro to Python for Computer Science and Data Science" width="150px"/></a>
 
