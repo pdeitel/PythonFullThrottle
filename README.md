@@ -48,7 +48,7 @@ Copyright 2022 by Deitel & Associates, Inc. and Pearson Education, Inc. All Righ
 If you intend to execute code in parallel with me during the live training (which you don't need to do, but can), you'll want to do one of the following:
 
 1. For a **zero-install environment**, you can go to the following mybinder.org link, which will allocate a cloud-based environment and load this repository's Jupyter Notebooks https://mybinder.org/v2/gh/pdeitel/PythonFullThrottle/master?urlpath=lab.
-2. You can run everything locally on your computer. To do so, install the Anaconda Python Distribution for Python 3.8 at https://www.anaconda.com/distribution/#download-section
+2. You can run everything locally on your computer. To do so, install the Anaconda Python Distribution for Python 3.9 at https://www.anaconda.com/distribution/#download-section
 3. You can use one of the Jupyter team's preconfigured Docker containrs:
 > `docker run -p 8888:8888 -it --user root -v fullPathTo/PythonFullThrottle:/home/jovyan/work jupyter/scipy-notebook:latest start.sh jupyter lab`
 
@@ -57,7 +57,9 @@ In #3, **be sure to replace `fullPathTo/PythonFullThrottle` with the actual loca
 # Our Books on Which These Examples Are Based
 The content of this course is based on our book <a href=https://amzn.to/2Kd8dQk target="_blank">Python for Programmers</a>, which is a subset of our book <a href=https://amzn.to/2KfCptN target="_blank">Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud.</a> Both are available to O'Reilly Online Learning subscribers. See all our recent content and webinars on O'Reilly at https://deitel.com/LearnWithDeitel
     
-![Cover image for Python for Programmers](http://deitel.com/bookresources/PythonFP/PythonForProgrammersCover.png)
+<a href="https://deitel.com/python-for-programmers-book/"><img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" alt="Cover image for Python for Programmers" width="150px"/></a>
+
+<a href="https://deitel.com/intro-to-python-for-computer-science-and-data-science/"><img src="https://deitel.com/wp-content/uploads/2020/01/intro-to-python-for-computer-science-and-data-science.jpg" alt="Cover image for Intro to Python for Computer Science and Data Science" width="150px"/></a>
 
 The authors and publisher of this book have used their best efforts in preparing this book. These efforts include the development, research, and testing of the theories and programs to determine their effectiveness. The authors and publisher make no warranty of any kind, expressed or implied, with regard to these programs or to the documentation contained in this book. The authors and publisher shall not be liable in any event for incidental or consequential damages in connection with, or arising out of, the furnishing, performance, or use of these programs.
 
