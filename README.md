@@ -2,6 +2,8 @@
 Source code and Jupyter Notebooks files for my "Python Full Throttle" live training course:
 
 The links below will take you to the course page. If you registered/attended that session, that page is where you can access the archived video.
+* November 8, 2022: https://learning.oreilly.com/live-events/python-full-throttle-with-paul-deitel-a-one-day-fast-paced-code-intensive-python-presentation/0636920274667/0636920078731/
+* October 4, 2022: https://learning.oreilly.com/live-events/python-full-throttle-with-paul-deitel-a-one-day-fast-paced-code-intensive-python-presentation/0636920274667/0636920078573/
 * September 6, 2022: https://learning.oreilly.com/live-events/python-full-throttle-with-paul-deitel-a-one-day-fast-paced-code-intensive-python-presentation/0636920274667/0636920078291/
 * August 9, 2022: https://learning.oreilly.com/live-events/python-full-throttle-with-paul-deitel-a-one-day-fast-paced-code-intensive-python-presentation/0636920274667/0636920075327/
 * May 10, 2022: https://learning.oreilly.com/live-events/python-full-throttle-with-paul-deitel-a-one-day-fast-paced-code-intensive-python/0636920274667/0636920071434/
