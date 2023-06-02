@@ -62,7 +62,7 @@ If you intend to execute code in parallel with me during the live training (whic
 1. For a **zero-install environment**, you can go to the following mybinder.org link, which will allocate a cloud-based environment and load this repository's Jupyter Notebooks https://mybinder.org/v2/gh/pdeitel/PythonFullThrottle/master?urlpath=lab.
 2. You can run everything locally on your computer. To do so, install the Anaconda Python Distribution for Python 3.9 at https://www.anaconda.com/distribution/#download-section
 3. You can use one of the Jupyter team's preconfigured Docker containrs:
-> `docker run -p 8888:8888 -it --user root -v fullPathTo/PythonFullThrottle:/home/jovyan/work jupyter/scipy-notebook:latest start.sh jupyter lab`
+> `docker run -p 8888:8888 -it --user root -v .:/home/jovyan/work jupyter/scipy-notebook:latest start.sh jupyter lab`
 
 In #3, **be sure to replace `fullPathTo/PythonFullThrottle` with the actual location where you download my code on your system**.
 
