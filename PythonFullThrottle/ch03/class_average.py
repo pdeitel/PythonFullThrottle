@@ -1,5 +1,6 @@
 # class_average.py
-"""Class average program with sequence-controlled iteration."""
+"""Class average program with 
+sequence-controlled iteration."""
 
 # initialization phase
 total = 0  # sum of grades

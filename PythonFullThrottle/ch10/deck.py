@@ -34,7 +34,7 @@ class DeckOfCards:
         s = ''
 
         for index, card in enumerate(self._deck):
-            s += f'{self._deck[index]:<19}'
+            s += f'{card:<19}'
             if (index + 1) % 4 == 0:
                 s += '\n'
         
