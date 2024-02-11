@@ -1,6 +1,6 @@
 # complexnumber.py
 """Complex class with overloaded operators."""
-
+from typing import override
 class Complex:
     """Complex class that represents a complex number 
     with real and imaginary parts."""
@@ -15,6 +15,7 @@ class Complex:
         return Complex(self.real + right.real, 
                        self.imaginary + right.imaginary)
 
+    @override
     def __repr__(self):
         """Return string representation for repr()."""
         return (f'({self.real}' + 

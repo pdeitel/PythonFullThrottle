@@ -2,6 +2,7 @@
 """SalariedCommissionEmployee derived from CommissionEmployee."""
 from commissionemployee import CommissionEmployee
 from decimal import Decimal
+from typing import override
 
 class SalariedCommissionEmployee(CommissionEmployee):
     """An employee who gets paid a salary plus 
@@ -24,10 +25,12 @@ class SalariedCommissionEmployee(CommissionEmployee):
         
         self._base_salary = salary
 
+    @override
     def earnings(self):
         """Calculate earnings."""   
         return super().earnings() + self.base_salary
 
+    @override
     def __repr__(self):
         """Return string representation for repr()."""
         return ('Salaried' + super().__repr__() +      

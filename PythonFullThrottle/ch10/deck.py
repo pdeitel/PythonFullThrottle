@@ -2,6 +2,7 @@
 """Deck class represents a deck of Cards."""
 import random 
 from card import Card
+from typing import override
 
 class DeckOfCards:
     NUMBER_OF_CARDS = 52  # constant number of Cards
@@ -29,6 +30,7 @@ class DeckOfCards:
         except:
             return None  
 
+    @override
     def __str__(self):
         """Return a string representation of the entire _deck."""
         s = ''

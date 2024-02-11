@@ -1,6 +1,7 @@
 # commmissionemployee.py
 """CommissionEmployee base class."""
 from decimal import Decimal
+from typing import override
 
 class CommissionEmployee:
     """An employee who gets paid commission based on gross sales."""
@@ -44,6 +45,7 @@ class CommissionEmployee:
         """Calculate earnings."""   
         return self.gross_sales * self.commission_rate
 
+    @override
     def __repr__(self):
         """Return string representation for repr()."""
         return (f'CommissionEmployee: {self.name}\n' + 

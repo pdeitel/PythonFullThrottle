@@ -1,5 +1,6 @@
 # timewithproperties.py
 """Class Time with read-write properties."""
+from typing import override
 
 class Time:
     """Class Time with read-write properties."""
@@ -55,11 +56,13 @@ class Time:
         self.minute = minute
         self.second = second
 
+    @override
     def __repr__(self):
         """Return Time string for repr()."""
         return (f'Time(hour={self.hour}, minute={self.minute}, ' + 
                 f'second={self.second})')
 
+    @override
     def __str__(self):
         """Return Time string in 12-hour clock format."""
         return (('12' if self.hour in (0, 12) else str(self.hour % 12)) + 

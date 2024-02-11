@@ -1,5 +1,6 @@
 # card.py
 """Card class that represents a playing card and its image file name."""
+from typing import override
 
 class Card:
     FACES = ['Ace', '2', '3', '4', '5', '6',
@@ -26,14 +27,17 @@ class Card:
         """Return the Card's image file name."""
         return str(self).replace(' ', '_').lower() + '.png'
 
+    @override
     def __repr__(self):
         """Return string representation for repr()."""
         return f"Card(face='{self.face}', suit='{self.suit}')"     
 
+    @override
     def __str__(self):
         """Return string representation for str()."""
         return f'{self.face} of {self.suit}'
 
+    @override
     def __format__(self, format):
         """Return formatted string representation."""
         return f'{str(self):{format}}'
