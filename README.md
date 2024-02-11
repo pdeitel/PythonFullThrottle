@@ -1,5 +1,5 @@
 # PythonFullThrottle
-Source code and Jupyter Notebooks files for my "Python Full Throttle" live training course. 
+Source code and Jupyter Notebooks files for my "Python Full Throttle" live training course.  
 
 I'll keep this repository up-to-date with any changes I make for future presentations. 
 
