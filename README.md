@@ -1,5 +1,5 @@
 # PythonFullThrottle
-Source code and Jupyter Notebooks files for my "Python Full Throttle" live training course.  
+Source code and Jupyter Notebooks files for my "Python Full Throttle" live training course. I've added several new examples covering language features added in Python 3.8-3.12.
 
 I'll keep this repository up-to-date with any changes I make for future presentations. 
 
@@ -17,7 +17,7 @@ If you intend to execute code in parallel with me during the live training (whic
 3. You can use the Jupyter team's preconfigured jupyter/scipy-notebook Docker container:
 > `docker run -p 8888:8888 -it --user root -v fullPathTo/PythonFullThrottle:/home/jovyan/work jupyter/scipy-notebook:latest start.sh jupyter lab`
 
-In #3, **be sure to replace `fullPathTo/PythonFullThrottle` with the actual location where you download my code on your system**.
+In #3, **be sure to replace `fullPathTo/PythonFullThrottle` with the actual location where you download and extract my code on your system**.
 
 # Our Books on Which These Examples Are Based
 The content of this course is based on our book <a href=https://amzn.to/2Kd8dQk target="_blank">Python for Programmers</a>, which is a subset of our book <a href=https://amzn.to/2KfCptN target="_blank">Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud.</a> Both are available to O'Reilly Online Learning subscribers. See all our recent content and webinars on O'Reilly at https://deitel.com/LearnWithDeitel
