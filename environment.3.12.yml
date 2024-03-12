@@ -1,0 +1,13 @@
+name: py3_12
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - ipympl
+  - ipython
+  - jupyterlab
+  - matplotlib
+  - nodejs
+  - numpy
+  - seaborn
