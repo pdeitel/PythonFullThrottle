@@ -10,4 +10,4 @@ dependencies:
   - matplotlib
   - nodejs
   - numpy
-  - seaborn
+  - seaborn=0.13.2
