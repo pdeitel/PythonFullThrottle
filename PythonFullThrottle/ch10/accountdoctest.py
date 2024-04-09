@@ -8,7 +8,7 @@ class Account:
     def __init__(self, name, balance):
         """Create and initialize an Account object.
         
-        >>> account1 = Account('John Green', Decimal('50.00'))       
+        >>> account1 = Account('John Green', Decimal('50.00')) 
         >>> account1.name
         'John Green'
         >>> account1.balance
