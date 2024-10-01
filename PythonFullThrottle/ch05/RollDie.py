@@ -6,6 +6,9 @@ import random
 import seaborn as sns
 import sys
 
+import matplotlib
+matplotlib.use('osx')  # Use the 'osx' backend
+
 # use list comprehension to create a list of rolls of a six-sided die
 rolls = [random.randrange(1, 7) for i in range(int(sys.argv[1]))]
 
