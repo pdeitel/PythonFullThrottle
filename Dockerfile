@@ -2,7 +2,7 @@
 FROM jupyter/scipy-notebook
 
 # Install additional packages that are not included in the base image
-RUN conda install --quiet --yes \
-    'ipympl' \
-    'nodejs' \
-    && conda clean --all -f -y
+#RUN conda install --quiet --yes \
+#    'ipympl' \
+#    'nodejs' \
+#    && conda clean --all -f -y
