@@ -1,4 +1,4 @@
-# PythonFullThrottle
+# PythonFullThrottle 
 Source code and Jupyter Notebooks files for my "Python Full Throttle" live training course. I've added several new examples covering language features added in Python 3.8-3.12.
 
 I'll keep this repository up-to-date with any changes I make for future presentations. 
