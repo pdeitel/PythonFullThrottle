@@ -6,9 +6,6 @@ import random
 import seaborn as sns
 import sys
 
-import matplotlib
-matplotlib.use('osx')  # Use the 'osx' backend
-
 # use list comprehension to create a list of rolls of a six-sided die
 rolls = [random.randrange(1, 7) for i in range(int(sys.argv[1]))]
 
@@ -17,7 +14,7 @@ values, frequencies = np.unique(rolls, return_counts=True)
 
 title = f'Rolling a Six-Sided Die {len(rolls):,} Times'
 sns.set_style('whitegrid')  # white backround with gray grid lines
-axes = sns.barplot(x=values, y=frequencies, palette='bright', hue=values, legend=False)  # create bars
+axes = sns.barplot(x=values, y=frequencies, palette='bright', hue=values, legend=False)
 axes.set_title(title)  # set graph title
 axes.set(xlabel='Die Value', ylabel='Frequency')  # label the axes
 
