@@ -1,9 +1,9 @@
-name: py3_13
+name: py3_12
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.13
+  - python=3.12
   - ipympl
   - ipython
   - jupyterlab
