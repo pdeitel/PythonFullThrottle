@@ -1,5 +1,10 @@
 # RollDieDynamic.py
 """Dynamically graphing frequencies of die rolls."""
+
+# next two lines added due to a known bug being fixed in a future Python version
+import warnings
+warnings.filterwarnings("ignore", message="Parsing dates involving a day of month without a year specified.*")
+
 from matplotlib import animation
 import matplotlib.pyplot as plt
 import random 

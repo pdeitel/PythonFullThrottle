@@ -1,5 +1,10 @@
 # RollDie.py
 """Graphing frequencies of die rolls with Seaborn."""
+
+# next two lines added due to a known bug being fixed in a future Python version
+import warnings
+warnings.filterwarnings("ignore", message="Parsing dates involving a day of month without a year specified.*")
+
 import matplotlib.pyplot as plt
 import numpy as np
 import random 
