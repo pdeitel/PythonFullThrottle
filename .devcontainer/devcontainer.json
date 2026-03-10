@@ -1,1 +1,15 @@
-{"name":"Python Full Throttle","image":"mcr.microsoft.com/devcontainers/miniconda:3","settings":{"command":"/bin/bash"},"postCreateCommand":"conda env update -n base -f environment.yml && conda clean -afy","forwardPorts":[8888],"access":{ "rules": [ { "type": "container", "ports": [8888], "access": "public" } ] },"initializeCommand":"jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --NotebookApp.token=''"}
+{
+  "name": "Python Full Throttle",
+  "image": "mcr.microsoft.com/devcontainers/miniconda:3",
+  "postCreateCommand": "conda env update -n base -f environment.yml && conda clean -afy",
+  "postStartCommand": "bash .devcontainer/postStart.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-toolsai.jupyter"]
+    }
+  },
+  "forwardPorts": [8888],
+  "portsAttributes": {
+    "8888": { "label": "JupyterLab" }
+  }
+}
