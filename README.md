@@ -7,7 +7,7 @@ I'll keep this repository up-to-date with any changes I make for future presenta
 
 If you have any questions, open an issue in the Issues tab or email us: deitel at deitel dot com.
 
-Copyright 2026 by Deitel & Associates, Inc. and Pearson Education, Inc. All Rights Reserved. 
+© Copyright 2026 by Deitel & Associates, Inc. and Pearson Education, Inc. All Rights Reserved. 
 
 # Setup for Executing the Examples
 If you intend to execute code in parallel with me during the live training (which you don't need to do, but can), you'll want to do one of the following:
