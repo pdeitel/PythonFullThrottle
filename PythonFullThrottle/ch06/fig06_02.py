@@ -8,12 +8,7 @@ word_counts = {}
 
 # count occurrences of each unique word
 for word in text.split():
-    # could replace this if/else with: 
-    # word_counts[word] = word_counts.get(word, 0) + 1
-    if word in word_counts: 
-        word_counts[word] += 1  # update existing key-value pair
-    else:
-        word_counts[word] = 1  # insert new key-value pair
+    word_counts[word] = word_counts.get(word, 0) + 1
 
 print(f'{"WORD":<12}COUNT')
 
@@ -21,3 +16,19 @@ for word, count in sorted(word_counts.items()):
     print(f'{word:<12}{count}')
 
 print('\nNumber of unique words:', len(word_counts))
+
+
+#**************************************************************************
+# (C) Copyright 1992-2026 by Deitel & Associates, Inc. and               #
+#* Pearson Education, Inc. All Rights Reserved.                           *
+#*                                                                        *
+#* DISCLAIMER: The authors and publisher of this book have used their     *
+#* best efforts in preparing the book. These efforts include the          *
+#* development, research, and testing of the theories and programs        *
+#* to determine their effectiveness. The authors and publisher make       *
+#* no warranty of any kind, expressed or implied, with regard to these    *
+#* programs or to the documentation contained in these books. The authors *
+#* and publisher shall not be liable in any event for incidental or       *
+#* consequential damages in connection with, or arising out of, the       *
+#* furnishing, performance, or use of these programs.                     *
+#**************************************************************************

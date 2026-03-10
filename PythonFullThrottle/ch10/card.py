@@ -3,9 +3,9 @@
 from typing import override
 
 class Card:
-    FACES = ['Ace', '2', '3', '4', '5', '6',
-             '7', '8', '9', '10', 'Jack', 'Queen', 'King']
-    SUITS = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+    FACES = ('Ace', '2', '3', '4', '5', '6',
+             '7', '8', '9', '10', 'Jack', 'Queen', 'King')
+    SUITS = ('Hearts', 'Diamonds', 'Clubs', 'Spades')
 
     def __init__(self, face, suit):
         """Initialize a Card with a face and suit."""
@@ -45,7 +45,7 @@ class Card:
 
 
 ##########################################################################
-# (C) Copyright 2025 by Deitel & Associates, Inc. and                    #
+# (C) Copyright 1992-2026 by Deitel & Associates, Inc. and               #
 # Pearson Education, Inc. All Rights Reserved.                           #
 #                                                                        #
 # DISCLAIMER: The authors and publisher of this book have used their     #

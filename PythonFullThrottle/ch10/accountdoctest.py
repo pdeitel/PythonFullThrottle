@@ -8,7 +8,7 @@ class Account:
     def __init__(self, name, balance):
         """Create and initialize an Account object.
         
-        >>> account1 = Account('John Green', Decimal('50.00')) 
+        >>> account1 = Account('John Green', Decimal('50.00'))
         >>> account1.name
         'John Green'
         >>> account1.balance
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     doctest.testmod(verbose=True)
 
 ##########################################################################
-# (C) Copyright 2025 by Deitel & Associates, Inc. and                    #
+# (C) Copyright 1992-2026 by Deitel & Associates, Inc. and               #
 # Pearson Education, Inc. All Rights Reserved.                           #
 #                                                                        #
 # DISCLAIMER: The authors and publisher of this book have used their     #

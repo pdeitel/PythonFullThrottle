@@ -14,10 +14,11 @@ while True:
     else:  # executes only if no exceptions occur
         print(f'{number1:.3f} / {number2:.3f} = {result:.3f}')
         break  # terminate the loop
-
+    finally:
+        pass
 
 ##########################################################################
-# (C) Copyright 2025 by Deitel & Associates, Inc. and                    #
+# (C) Copyright 1992-2026 by Deitel & Associates, Inc. and               #
 # Pearson Education, Inc. All Rights Reserved.                           #
 #                                                                        #
 # DISCLAIMER: The authors and publisher of this book have used their     #

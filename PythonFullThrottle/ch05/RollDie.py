@@ -1,46 +1,37 @@
 # RollDie.py
-"""Graphing frequencies of die rolls with Seaborn."""
-
-# next two lines added due to a known bug being fixed in a future Python version
-import warnings
-warnings.filterwarnings("ignore", message="Parsing dates involving a day of month without a year specified.*")
-
+"""Graphing frequencies of die rolls with Matplotlib."""
 import matplotlib.pyplot as plt
 import numpy as np
-import random 
-import seaborn as sns
+import random
 import sys
 
-# use list comprehension to create a list of rolls of a six-sided die
-rolls = [random.randrange(1, 7) for i in range(int(sys.argv[1]))]
+n_rolls = int(sys.argv[1])  # get number of rolls from command line 
+rolls = random.choices(range(1, 7), k=n_rolls)  # roll the dice
+faces, frequencies = np.unique(rolls, return_counts=True)  # summarize 
 
-# NumPy unique function returns unique faces and frequency of each face
-values, frequencies = np.unique(rolls, return_counts=True)
+figure, axes = plt.subplots()  # get a window and its plot area
+bars = axes.bar(faces, frequencies)  # create bar plot and get its bars
 
-title = f'Rolling a Six-Sided Die {len(rolls):,} Times'
-sns.set_style('whitegrid')  # white backround with gray grid lines
-axes = sns.barplot(x=values, y=frequencies, palette='bright', hue=values, legend=False)
-axes.set_title(title)  # set graph title
-axes.set(xlabel='Die Value', ylabel='Frequency')  # label the axes
+# add labels; scale y-axis by 15% to accommodate text at top of each bar
+axes.set(title=f'Rolling a Six-Sided Die {n_rolls:,} Times',
+    xlabel='Die Value', ylabel='Frequency',
+    ylim=(0, frequencies.max() * 1.15))
 
-# scale y-axis by 10% to make room for text above bars
-axes.set_ylim(top=max(frequencies) * 1.10)
+# ensure large y-axis values display in fixed, not scientific, notation
+axes.ticklabel_format(style='plain', axis='y') 
 
-# display frequency & percentage above each patch (bar)
-for bar, frequency in zip(axes.patches, frequencies):
-    text_x = bar.get_x() + bar.get_width() / 2.0  
-    text_y = bar.get_height() 
-    text = f'{frequency:,}\n{frequency / len(rolls):.3%}'
-    axes.text(text_x, text_y, text, 
-              fontsize=11, ha='center', va='bottom')
+# label the bars with their frequencies
+labels = [f'{f:,}\n{f / n_rolls:.3%}' for f in frequencies]
+axes.bar_label(bars, labels=labels, padding=3)
 
-plt.show()  # display graph 
+plt.tight_layout()  
+plt.show()  # display the Figure containing the bar plot
 
 
 
 
 #**************************************************************************
-#* (C) Copyright 1992-2018 by Deitel & Associates, Inc. and               *
+#* (C) Copyright 1992-2026 by Deitel & Associates, Inc. and               *
 #* Pearson Education, Inc. All Rights Reserved.                           *
 #*                                                                        *
 #* DISCLAIMER: The authors and publisher of this book have used their     *

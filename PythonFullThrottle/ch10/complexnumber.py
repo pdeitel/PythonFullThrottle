@@ -1,6 +1,7 @@
 # complexnumber.py
 """Complex class with overloaded operators."""
 from typing import override
+
 class Complex:
     """Complex class that represents a complex number 
     with real and imaginary parts."""
@@ -9,7 +10,8 @@ class Complex:
         """Initialize Complex class's attributes."""
         self.real = real
         self.imaginary = imaginary
-
+    
+    @override
     def __add__(self, right):
         """Overrides the + operator."""
         return Complex(self.real + right.real, 
@@ -24,7 +26,7 @@ class Complex:
 
 
 ##########################################################################
-# (C) Copyright 2025 by Deitel & Associates, Inc. and                    #
+# (C) Copyright 1992-2026 by Deitel & Associates, Inc. and               #
 # Pearson Education, Inc. All Rights Reserved.                           #
 #                                                                        #
 # DISCLAIMER: The authors and publisher of this book have used their     #

@@ -6,9 +6,9 @@ from typing import ClassVar, override
 
 @dataclass
 class Card:
-    FACES: ClassVar[list[str]] = ['Ace', '2', '3', '4', '5', '6', '7', 
-                                  '8', '9', '10', 'Jack', 'Queen', 'King']
-    SUITS: ClassVar[list[str]] = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+    FACES: ClassVar[tuple[str]] = ('Ace', '2', '3', '4', '5', '6', '7', 
+                                  '8', '9', '10', 'Jack', 'Queen', 'King')
+    SUITS: ClassVar[tuple[str]] = ('Hearts', 'Diamonds', 'Clubs', 'Spades')
 
     face: str
     suit: str
@@ -33,7 +33,7 @@ class Card:
 
 
 ##########################################################################
-# (C) Copyright 2025 by Deitel & Associates, Inc. and                    #
+# (C) Copyright 1992-2026 by Deitel & Associates, Inc. and               #
 # Pearson Education, Inc. All Rights Reserved.                           #
 #                                                                        #
 # DISCLAIMER: The authors and publisher of this book have used their     #
